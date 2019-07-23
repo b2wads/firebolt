@@ -4,7 +4,13 @@
   "description": "Boilerplate para projetos NodeJS",
   "main": "app.js",
   "dependencies": {
-    "express": "4.17.0"
+    "axios": "^0.19.0",
+    "grimorio-ui": "file:packages/grimorio-ui-5.0.0.b2wads.tgz",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "codecov": "3.5.0",

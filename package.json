@@ -1,0 +1,50 @@
+{
+  "name": "nodejs-boilerplate",
+  "version": "0.1.0",
+  "description": "Boilerplate para projetos NodeJS",
+  "main": "app.js",
+  "dependencies": {
+    "express": "4.17.0"
+  },
+  "devDependencies": {
+    "codecov": "3.5.0",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "4.3.0",
+    "eslint-plugin-import": "2.17.3",
+    "eslint-plugin-jest": "22.6.4",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-no-unsafe-regex": "1.0.0",
+    "eslint-plugin-prettier": "3.1.0",
+    "eslint-plugin-react": "7.13.0",
+    "eslint-plugin-security": "1.4.0",
+    "eslint-plugin-you-dont-need-lodash-underscore": "6.5.0",
+    "jest": "24.8.0",
+    "prettier": "1.17.1",
+    "supertest": "4.0.2"
+  },
+  "scripts": {
+    "codecov": "./node_modules/.bin/codecov",
+    "fmt": "./node_modules/.bin/prettier --write \"./**/*.js\" && ./node_modules/.bin/eslint --fix .",
+    "fmt:check": "./node_modules/.bin/prettier --check \"./**/*.js\" && ./node_modules/.bin/eslint .",
+    "start": "node ./bin/www",
+    "start:web": "node app.js",
+    "test": "./node_modules/.bin/jest --coverage",
+    "test:unit": "./node_modules/.bin/jest --coverage test test/unit/*",
+    "worker:<worker-name>": "node worker/<worker-name.js>",
+    "cron:<cron-name>": "node scripts/cron-<cron-name>.js",
+    "fix:<fix-name>": "node scripts/fix-<fix-name>.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com:b2wads/nodejs-boilerplate"
+  },
+  "keywords": [
+    "nodejs",
+    "boilerplate",
+    "webapp",
+    "worker"
+  ],
+  "author": "B2WADS",
+  "license": "MIT"
+}

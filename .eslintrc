@@ -1,0 +1,8 @@
+{
+  "extends": ["airbnb", "plugin:jest/recommended", "plugin:security/recommended", "plugin:you-dont-need-lodash-underscore/compatible", "prettier"],
+  "plugins": ["prettier", "security", "no-unsafe-regex"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "no-unsafe-regex/no-unsafe-regex": 2
+  }
+}

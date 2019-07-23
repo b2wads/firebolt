@@ -1,3 +1,8 @@
+import { shallow } from 'enzyme'
+import App from './app'
+import React from 'react'
+const wrapper = shallow(<App />)
+
 it('prim', () => {
-  expect(true).toBe(true)
+  expect(wrapper).toHaveLength(1)
 })

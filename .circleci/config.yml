@@ -50,5 +50,5 @@ workflows:
           context: docker-registry-auth
   optional-checks:
     jobs:
-      - node11x:
+      - node12x:
           context: docker-registry-auth

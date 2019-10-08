@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
+import { Button } from 'grimorio-ui'
+import '../node_modules/grimorio-ui/dist/grimorio-ui.min.css'
+
 export default class App extends Component {
   render() {
-    return <button>Teste</button>
+    return <Button>Teste</Button>
   }
 }

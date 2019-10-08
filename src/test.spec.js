@@ -1,8 +1,14 @@
 import { shallow } from 'enzyme'
 import App from './app'
 import React from 'react'
-const wrapper = shallow(<App />)
+
+const props = {
+  onClick: jest.fn()
+}
+const wrapper = shallow(<App {...props} />)
 
 it('prim', () => {
-  expect(wrapper.find('Button')).toHaveLength(1)
+  expect(wrapper.debug()).toMatchSnapshot()
+  wrapper.simulate('click')
+  expect(props.onClick).toHaveBeenCalled()
 })

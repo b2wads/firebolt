@@ -11,8 +11,7 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "redux": "^4.0.4",
-    "redux-thunk": "^2.3.0",
-    "webpack": "^4.37.0"
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.5.5",
@@ -39,7 +38,8 @@
     "jsdom": "^15.1.1",
     "prettier": "1.17.1",
     "style-loader": "^0.23.1",
-    "supertest": "4.0.2"
+    "supertest": "4.0.2",
+    "webpack": "^4.37.0"
   },
   "scripts": {
     "codecov": "./node_modules/.bin/codecov",

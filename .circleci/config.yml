@@ -2,17 +2,17 @@ version: 2.1
 
 commands:
   all-tests:
-    description: "Roda todos os testes do projeto (unitários e integração)"
+    description: 'Roda todos os testes do projeto (unitários e integração)'
     steps:
-      - run: "npm test"
+      - run: 'npm test'
 
 jobs:
   node10x: &template
     docker:
       - image: circleci/node:10-jessie
         #auth:
-          #username: $B2WADS_DOCKER_REGISTRY_USERNAME
-          #password: $B2WADS_DOCKER_REGISTRY_PASSWORD
+        #username: $B2WADS_DOCKER_REGISTRY_USERNAME
+        #password: $B2WADS_DOCKER_REGISTRY_PASSWORD
       #- image: mongo:3.6
       #- image: elasticsearch:5
       #- image: rabbitmq:3.6-alpine
@@ -22,22 +22,21 @@ jobs:
       - run:
           name: Install deps
           command: npm install
-      - run:
-          name: Format check
-          command: npm run fmt:check
+      # - run:
+      #     name: Format check
+      #     command: npm run fmt:check
       - all-tests
       - run:
           when: on_success
           command: npm run codecov
-  node11x:
-      <<: *template
-      docker:
-        - image: circleci/node:11
-        #- image: mongo:3.6
-        #- image: elasticsearch:5
-        #- image: rabbitmq:3.6-alpine
-        #- image: redis:5
-
+  node12x:
+    <<: *template
+    docker:
+      - image: circleci/node:12
+      #- image: mongo:3.6
+      #- image: elasticsearch:5
+      #- image: rabbitmq:3.6-alpine
+      #- image: redis:5
 
 # O `context:` abaixo deve ser usado se você precisa
 # de uma imagem privada. Nesse context devem estar cadastradas as envs:
@@ -51,5 +50,5 @@ workflows:
           context: docker-registry-auth
   optional-checks:
     jobs:
-      - node11x:
+      - node12x:
           context: docker-registry-auth

@@ -4,5 +4,5 @@ import React from 'react'
 const wrapper = shallow(<App />)
 
 it('prim', () => {
-  expect('Button').toHaveLength(1)
+  expect(wrapper.find('Button')).toHaveLength(1)
 })

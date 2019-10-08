@@ -1,26 +1,16 @@
 const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-
-// const extractSass = new MiniCssExtractPlugin({
-//   filename: `app.css`,
-//   allChunks: true
-// })
-
-const extractTheme = new MiniCssExtractPlugin({
-  filename: `grimorio-ui.css`,
-  allChunks: true
-})
+const ExtractCSS = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src', 'app.js'),
+  entry: path.resolve(__dirname, '../src'),
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, '../public'),
     filename: 'bundle.js'
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'public')
   },
-  plugins: [extractTheme],
   module: {
     rules: [
       {
@@ -32,13 +22,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
+        exclude: /node_modules/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: '../',
-              hmr: process.env.NODE_ENV === 'development'
-            }
+            loader: ExtractCSS.loader,
+            options: {}
           },
           'css-loader'
         ]
@@ -46,13 +34,14 @@ module.exports = {
       {
         test: /\.css$/,
         include: [
-          path.resolve(__dirname, '../node_modules/grimorio-ui/dist/'),
+          path.resolve(__dirname, '../node_modules/grimorio-ui/dist'),
           path.resolve(
             __dirname,
             '../node_modules/grimorio-ui/node_modules/react-dates/lib/css/_datepicker.css'
           )
         ],
-        loader: extractTheme.extract('style-loader', ['css-loader'])
+        sideEffects: true,
+        use: [ExtractCSS.loader, 'css-loader']
       },
       {
         test: /.*\.(gif|png|jpe?g)$/i,
@@ -61,5 +50,13 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new ExtractCSS({
+      filename: 'app.css'
+    }),
+    new HtmlWebpackPlugin({
+      template: './index.html'
+    })
+  ]
 }

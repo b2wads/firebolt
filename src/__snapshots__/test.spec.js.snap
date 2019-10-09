@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`prim 1`] = `
-"<Button onClick={[Function: mockConstructor]} iconLeft=\\"whatshot\\" disabled={false} color=\\"primary\\" size=\\"medium\\" type=\\"button\\" className={[undefined]} active={false}>
+"<Button onClick={[Function: onClick]} iconLeft=\\"whatshot\\" disabled={false} color=\\"primary\\" size=\\"medium\\" type=\\"button\\" className={[undefined]} active={false}>
   hello
 </Button>"
 `;

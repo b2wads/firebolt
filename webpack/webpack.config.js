@@ -1,9 +1,11 @@
 const path = require('path')
+const ExtractCSS = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src', 'app.js'),
+  entry: path.resolve(__dirname, '../src'),
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, '../public'),
     filename: 'bundle.js'
   },
   devServer: {
@@ -20,14 +22,26 @@ module.exports = {
       },
       {
         test: /\.css$/,
+        exclude: /node_modules/,
         use: [
           {
-            loader: 'style-loader'
+            loader: ExtractCSS.loader,
+            options: {}
           },
-          {
-            loader: 'css-loader'
-          }
+          'css-loader'
         ]
+      },
+      {
+        test: /\.css$/,
+        include: [
+          path.resolve(__dirname, '../node_modules/grimorio-ui/dist'),
+          path.resolve(
+            __dirname,
+            '../node_modules/grimorio-ui/node_modules/react-dates/lib/css/_datepicker.css'
+          )
+        ],
+        sideEffects: true,
+        use: [ExtractCSS.loader, 'css-loader']
       },
       {
         test: /.*\.(gif|png|jpe?g)$/i,
@@ -36,5 +50,13 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new ExtractCSS({
+      filename: 'app.css'
+    }),
+    new HtmlWebpackPlugin({
+      template: './index.html'
+    })
+  ]
 }

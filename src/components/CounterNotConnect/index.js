@@ -20,7 +20,6 @@ function CounterNotConnect() {
     <div>
       <h1>Componente não conectado</h1>
       {counter}
-
       <div>
         <Button onClick={handleIncrement}>Aumentar valor</Button>
         <Button onClick={handleDecrement}>Diminuir valor</Button>

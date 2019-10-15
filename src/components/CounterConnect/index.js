@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Button } from 'grimorio-ui'
-import { increment, decrement, reset } from './action'
+import { increment, decrement, reset } from './counterConnect-action'
 
 export function Counter({ counter, increment, decrement, reset }) {
   return (

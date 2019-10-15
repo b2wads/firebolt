@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme'
 import React from 'react'
-import { Counter } from './index'
+import { Counter } from '.'
 
 const wrapper = shallow(<Counter />)
 

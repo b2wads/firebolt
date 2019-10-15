@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test render home page 1`] = `
+"<Fragment>
+  <Connect(Counter) />
+  <CounterNotConnect />
+</Fragment>"
+`;

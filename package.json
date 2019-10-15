@@ -9,7 +9,8 @@
     "grimorio-ui": "./packages/grimorio-ui-6.1.1.afiliados.tgz",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.1",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.1.2",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0"
   },

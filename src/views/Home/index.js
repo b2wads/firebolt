@@ -2,7 +2,7 @@ import React from 'react'
 import CounterConnect from '../../components/CounterConnect'
 import CounterNotConnect from '../../components/CounterNotConnect'
 
-function Home() {
+export default function Home() {
   return (
     <>
       <CounterConnect />
@@ -10,5 +10,3 @@ function Home() {
     </>
   )
 }
-
-export default Home

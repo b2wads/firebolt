@@ -1,19 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`snapshot counter not connect 1`] = `
+exports[`not connect snapshot counter not connect 1`] = `
 "<div>
   <h1>
     Componente não conectado
   </h1>
-  0
+  <div className=\\"value\\">
+    0
+  </div>
   <div>
-    <Button onClick={[Function: handleIncrement]} disabled={false} color=\\"primary\\" size=\\"medium\\" type=\\"button\\" className={[undefined]} active={false}>
+    <Button className=\\"increment-btn\\" onClick={[Function: handleIncrement]} disabled={false} color=\\"primary\\" size=\\"medium\\" type=\\"button\\" active={false}>
       Aumentar valor
     </Button>
-    <Button onClick={[Function: handleDecrement]} disabled={false} color=\\"primary\\" size=\\"medium\\" type=\\"button\\" className={[undefined]} active={false}>
+    <Button className=\\"decrement-btn\\" onClick={[Function: handleDecrement]} disabled={false} color=\\"primary\\" size=\\"medium\\" type=\\"button\\" active={false}>
       Diminuir valor
     </Button>
-    <Button onClick={[Function: handleReset]} disabled={false} color=\\"primary\\" size=\\"medium\\" type=\\"button\\" className={[undefined]} active={false}>
+    <Button className=\\"reset-btn\\" onClick={[Function: handleReset]} disabled={false} color=\\"primary\\" size=\\"medium\\" type=\\"button\\" active={false}>
       Zerar
     </Button>
   </div>

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`snapshot counter connect 1`] = `
+exports[`Render element snapshot counter connect 1`] = `
 "<div>
   <h1>
     Componente conectado

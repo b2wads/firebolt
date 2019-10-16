@@ -19,11 +19,18 @@ function CounterNotConnect() {
   return (
     <div>
       <h1>Componente não conectado</h1>
-      {counter}
+
+      <div className="value">{counter}</div>
       <div>
-        <Button onClick={handleIncrement}>Aumentar valor</Button>
-        <Button onClick={handleDecrement}>Diminuir valor</Button>
-        <Button onClick={handleReset}>Zerar</Button>
+        <Button className="increment-btn" onClick={handleIncrement}>
+          Aumentar valor
+        </Button>
+        <Button className="decrement-btn" onClick={handleDecrement}>
+          Diminuir valor
+        </Button>
+        <Button className="reset-btn" onClick={handleReset}>
+          Zerar
+        </Button>
       </div>
     </div>
   )

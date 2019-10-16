@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
-import CounterConnect from '../components/CounterConnect/reducer'
+import CounterConnect from '../components/CounterConnect/counterConnect-reducer'
 
 export default combineReducers({
-  counter: CounterConnect
+  totalCounter: CounterConnect
 })

@@ -17,7 +17,7 @@ export function Counter({ counter, increment, decrement, reset }) {
 
 export default connect(
   state => ({
-    counter: state.counter
+    counter: state.totalCounter.counter
   }),
   {
     increment,

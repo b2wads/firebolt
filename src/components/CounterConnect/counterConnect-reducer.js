@@ -1,15 +1,22 @@
-const INITIAL_STATE = 0
+import produce from 'immer'
 
-const reducer = (state = INITIAL_STATE, action) => {
-  switch (action.type) {
-    case 'INCREMENT':
-      return state + 1
-    case 'DECREMENT':
-      return state - 1
-    case 'RESET':
-      return 0
-    default:
-      return state
-  }
+const INITIAL_STATE = {
+  counter: 0
 }
-export default reducer
+
+export default (state = INITIAL_STATE, action) =>
+  produce(state, draft => {
+    switch (action.type) {
+      case 'INCREMENT':
+        draft.counter += 1
+        break
+      case 'DECREMENT':
+        draft.counter -= 1
+        break
+      case 'RESET':
+        draft.counter = 0
+        break
+      default:
+        return state
+    }
+  })

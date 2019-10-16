@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button } from 'grimorio-ui'
 
-function CounterNotConnect() {
+export default function CounterNotConnect() {
   const [counter, setCounter] = useState(0)
 
   function handleIncrement() {
@@ -19,7 +19,6 @@ function CounterNotConnect() {
   return (
     <div>
       <h1>Componente não conectado</h1>
-
       <div className="value">{counter}</div>
       <div>
         <Button className="increment-btn" onClick={handleIncrement}>
@@ -35,5 +34,3 @@ function CounterNotConnect() {
     </div>
   )
 }
-
-export default CounterNotConnect

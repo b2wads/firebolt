@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme'
 import React from 'react'
-import { Counter } from '.'
+import Counter from './counterConnect-component'
 import reducer, { INITIAL_STATE } from './counterConnect-reducer'
 import { increment, decrement, reset } from './counterConnect-action'
 
@@ -11,8 +11,6 @@ describe('Render element', () => {
     expect(wrapper.debug()).toMatchSnapshot()
   })
 })
-
-// describe('Actions', () => {})
 
 describe('Counter reducer', () => {
   it('NONE', () => {

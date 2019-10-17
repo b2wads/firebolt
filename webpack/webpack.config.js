@@ -21,6 +21,23 @@ module.exports = {
         }
       },
       {
+        test: /\.styl$/,
+        include: [path.resolve(__dirname, '../src')],
+        use: [
+          {
+            loader: ExtractCSS.loader,
+            options: {
+              hmr: process.env.NODE_ENV === 'development'
+            }
+          },
+          {
+            loader: 'css-loader',
+            options: {}
+          },
+          'stylus-loader'
+        ]
+      },
+      {
         test: /\.css$/,
         exclude: /node_modules/,
         use: [
@@ -37,7 +54,7 @@ module.exports = {
           path.resolve(__dirname, '../node_modules/grimorio-ui/dist'),
           path.resolve(
             __dirname,
-            '../node_modules/grimorio-ui/node_modules/react-dates/lib/css/_datepicker.css'
+            '../node_modules/react-dates/lib/css/_datepicker.css'
           )
         ],
         sideEffects: true,

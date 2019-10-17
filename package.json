@@ -21,6 +21,7 @@
     "babel-polyfill": "6.26.0",
     "codecov": "3.5.0",
     "css-loader": "^3.2.0",
+    "cypress": "^3.4.1",
     "enzyme-adapter-react-16": "1.14.0",
     "eslint": "5.16.0",
     "eslint-config-airbnb": "17.1.0",
@@ -50,6 +51,7 @@
   },
   "scripts": {
     "codecov": "./node_modules/.bin/codecov",
+    "cypress:open": "cypress open",
     "fmt": "./node_modules/.bin/prettier --write \"./**/*.js\" && ./node_modules/.bin/eslint --fix .",
     "fmt:check": "./node_modules/.bin/prettier --check \"./**/*.js\" && ./node_modules/.bin/eslint .",
     "start:dev": "webpack-dev-server --config ./webpack/webpack.config.js",

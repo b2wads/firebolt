@@ -52,6 +52,7 @@
   "scripts": {
     "codecov": "./node_modules/.bin/codecov",
     "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
     "fmt": "./node_modules/.bin/prettier --write \"./**/*.js\" && ./node_modules/.bin/eslint --fix .",
     "fmt:check": "./node_modules/.bin/prettier --check \"./**/*.js\" && ./node_modules/.bin/eslint .",
     "start:dev": "webpack-dev-server --config ./webpack/webpack.config.js",

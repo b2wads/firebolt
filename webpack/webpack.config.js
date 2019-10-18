@@ -6,10 +6,10 @@ module.exports = {
   entry: path.resolve(__dirname, '../src'),
   output: {
     path: path.resolve(__dirname, '../public'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'public')
+    contentBase: path.resolve(__dirname, 'public'),
   },
   module: {
     rules: [
@@ -17,8 +17,8 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
-        }
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.styl$/,
@@ -27,15 +27,15 @@ module.exports = {
           {
             loader: ExtractCSS.loader,
             options: {
-              hmr: process.env.NODE_ENV === 'development'
-            }
+              hmr: process.env.NODE_ENV === 'development',
+            },
           },
           {
             loader: 'css-loader',
-            options: {}
+            options: {},
           },
-          'stylus-loader'
-        ]
+          'stylus-loader',
+        ],
       },
       {
         test: /\.css$/,
@@ -43,37 +43,31 @@ module.exports = {
         use: [
           {
             loader: ExtractCSS.loader,
-            options: {}
+            options: {},
           },
-          'css-loader'
-        ]
+          'css-loader',
+        ],
       },
       {
         test: /\.css$/,
-        include: [
-          path.resolve(__dirname, '../node_modules/grimorio-ui/dist'),
-          path.resolve(
-            __dirname,
-            '../node_modules/react-dates/lib/css/_datepicker.css'
-          )
-        ],
+        include: [path.resolve(__dirname, '../node_modules/grimorio-ui/dist')],
         sideEffects: true,
-        use: [ExtractCSS.loader, 'css-loader']
+        use: [ExtractCSS.loader, 'css-loader'],
       },
       {
         test: /.*\.(gif|png|jpe?g)$/i,
         use: {
-          loader: 'file-loader'
-        }
-      }
-    ]
+          loader: 'file-loader',
+        },
+      },
+    ],
   },
   plugins: [
     new ExtractCSS({
-      filename: 'app.css'
+      filename: 'app.css',
     }),
     new HtmlWebpackPlugin({
-      template: './index.html'
-    })
-  ]
+      template: './index.html',
+    }),
+  ],
 }

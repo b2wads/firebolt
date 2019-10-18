@@ -4,11 +4,11 @@ import { increment, decrement, reset } from './counterConnect-action'
 
 export default connect(
   state => ({
-    counter: state.totalCounter.counter
+    counter: state.totalCounter.counter,
   }),
   {
     increment,
     decrement,
-    reset
+    reset,
   }
 )(Counter)

@@ -1,7 +1,7 @@
 import produce from 'immer'
 
 export const INITIAL_STATE = {
-  counter: 0
+  counter: 0,
 }
 
 export default (state = INITIAL_STATE, action) =>

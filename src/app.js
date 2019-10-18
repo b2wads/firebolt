@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
@@ -16,22 +15,3 @@ function App() {
 }
 
 export default App
-=======
-import React, { PureComponent } from 'react'
-import { Button } from 'grimorio-ui'
-
-export default class App extends PureComponent {
-  render() {
-    return (
-      <>
-        <Button
-          onClick={() => window.alert('hello world!')}
-          iconLeft="whatshot"
-        >
-          hello
-        </Button>
-      </>
-    )
-  }
-}
->>>>>>> fc00bdb18a2604199901853db936d94f530b0e8f

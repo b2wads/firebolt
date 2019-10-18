@@ -1,5 +1,5 @@
 const path = require('path')
-const ExtractCSS = require('mini-css-extract-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
@@ -24,28 +24,18 @@ module.exports = {
         test: /\.styl$/,
         include: [path.resolve(__dirname, '../src')],
         use: [
-          {
-            loader: ExtractCSS.loader,
-            options: {
-              hmr: process.env.NODE_ENV === 'development'
-            }
-          },
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
-            options: {}
+            options: {
+              modules: {
+                localIdentName: '[name]_[local]',
+                context: path.resolve(__dirname, '../src/')
+              },
+              importLoaders: true
+            }
           },
           'stylus-loader'
-        ]
-      },
-      {
-        test: /\.css$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: ExtractCSS.loader,
-            options: {}
-          },
-          'css-loader'
         ]
       },
       {
@@ -58,7 +48,7 @@ module.exports = {
           )
         ],
         sideEffects: true,
-        use: [ExtractCSS.loader, 'css-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
       {
         test: /.*\.(gif|png|jpe?g)$/i,
@@ -69,8 +59,8 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractCSS({
-      filename: 'app.css'
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash].css'
     }),
     new HtmlWebpackPlugin({
       template: './index.html'

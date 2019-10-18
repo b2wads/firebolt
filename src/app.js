@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { Button } from 'grimorio-ui'
+import MainButton from './components/button'
 
 export default class App extends Component {
   render() {
     return (
-      <Button onClick={() => window.alert('hello world!')} iconLeft="whatshot">
+      <MainButton>
         hello
-      </Button>
+      </MainButton>
     )
   }
 }

@@ -3,7 +3,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: path.resolve(__dirname, '../src'),
+  entry: {
+    boilerplate: [
+      path.resolve(__dirname, '../node_modules/grimorio-ui/dist/grimorio-ui.min.css'),
+      path.resolve(__dirname, '../src')
+    ]
+  },
   output: {
     path: path.resolve(__dirname, '../public'),
     filename: 'bundle.js'
@@ -21,32 +26,7 @@ module.exports = {
         }
       },
       {
-        test: /\.styl$/,
-        include: [path.resolve(__dirname, '../src')],
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              modules: {
-                localIdentName: '[name]_[local]',
-                context: path.resolve(__dirname, '../src/')
-              },
-              importLoaders: true
-            }
-          },
-          'stylus-loader'
-        ]
-      },
-      {
         test: /\.css$/,
-        include: [
-          path.resolve(__dirname, '../node_modules/grimorio-ui/dist'),
-          path.resolve(
-            __dirname,
-            '../node_modules/react-dates/lib/css/_datepicker.css'
-          )
-        ],
         sideEffects: true,
         use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
@@ -55,6 +35,23 @@ module.exports = {
         use: {
           loader: 'file-loader'
         }
+      },
+      {
+        test: /\.styl$/,
+        include: [path.resolve(__dirname, '../src')],
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                localIdentName: '[name]_[local]'
+              },
+              importLoaders: true
+            }
+          },
+          'stylus-loader'
+        ]
       }
     ]
   },

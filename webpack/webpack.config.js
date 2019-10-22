@@ -1,11 +1,15 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const cssNano = require('cssnano')
 
 module.exports = {
   entry: {
     boilerplate: [
-      path.resolve(__dirname, '../node_modules/grimorio-ui/dist/grimorio-ui.min.css'),
+      path.resolve(
+        __dirname,
+        '../node_modules/grimorio-ui/dist/grimorio-ui.min.css'
+      ),
       path.resolve(__dirname, '../src')
     ]
   },
@@ -48,6 +52,12 @@ module.exports = {
                 localIdentName: '[name]_[local]'
               },
               importLoaders: true
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [cssNano({ preset: 'default' })]
             }
           },
           'stylus-loader'

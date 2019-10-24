@@ -46,6 +46,7 @@
     "mini-css-extract-plugin": "0.8.0",
     "postcss-loader": "3.0.0",
     "prettier": "1.17.1",
+    "prop-types": "^15.7.2",
     "style-loader": "1.0.0",
     "stylus": "0.54.7",
     "stylus-loader": "3.0.2",
@@ -61,11 +62,10 @@
     "start:dev": "webpack-dev-server --config ./webpack/webpack.config.js",
     "prebuild": "rm -rf public",
     "build": "webpack --config ./webpack/webpack.config.js",
+    "create:redux": "bash ./internals/component/create-with-redux.sh $COMP ./src/components",
+    "create:comp": "bash ./internals/component/create.sh $COMP ./src/components",
     "test": "./node_modules/.bin/jest --coverage",
-    "test:unit": "./node_modules/.bin/jest --coverage test test/unit/*",
-    "worker:<worker-name>": "node worker/<worker-name.js>",
-    "cron:<cron-name>": "node scripts/cron-<cron-name>.js",
-    "fix:<fix-name>": "node scripts/fix-<fix-name>.js"
+    "test:unit": "./node_modules/.bin/jest --coverage test test/unit/*"
   },
   "repository": {
     "type": "git",

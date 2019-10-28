@@ -47,7 +47,7 @@ path=$2
 capitalize
 camelCase
 
-mkdir $path/$name -p
+mkdir -p $path/$name
 echo 'Created folder'
 
 cat > $path/$name/index.js <<EOF

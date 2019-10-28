@@ -1,6 +1,6 @@
 import React from 'react'
-import CounterConnect from '~/components/CounterConnect'
-import CounterNotConnect from '~/components/CounterNotConnect'
+import CounterNotConnect from '~/components/counter-not-connect'
+import CounterConnect from '~/components/counter-connect'
 
 export default function Home() {
   return (

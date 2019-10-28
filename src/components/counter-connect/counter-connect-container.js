@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import Counter from './counterConnect-component'
-import { increment, decrement, reset } from './counterConnect-action'
+import CounterConnect from './counter-connect-component'
+import { increment, decrement, reset } from './counter-connect-actions'
 
 export default connect(
   state => ({
@@ -11,4 +11,4 @@ export default connect(
     decrement,
     reset,
   }
-)(Counter)
+)(CounterConnect)

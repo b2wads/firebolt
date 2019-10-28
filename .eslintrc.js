@@ -2,15 +2,13 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
+    'jest/globals': true,
   },
-  extends: [
-    'airbnb',
-    'prettier',
-    'prettier/react'
-  ],
+  extends: ['airbnb', 'prettier', 'prettier/react'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
+    jest: true,
   },
   parser: 'babel-eslint',
   parserOptions: {
@@ -20,7 +18,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['react', 'jsx-a11y', 'import', 'react-hooks', 'prettier'],
+  plugins: ['react', 'jsx-a11y', 'import', 'react-hooks', 'prettier', 'jest'],
   rules: {
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
@@ -36,6 +34,11 @@ module.exports = {
     'no-console': ['error', { allow: ['tron'] }],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'jest/no-disabled-tests': 'warn',
+    'jest/no-focused-tests': 'error',
+    'jest/no-identical-title': 'error',
+    'jest/prefer-to-have-length': 'warn',
+    'jest/valid-expect': 'error',
   },
   settings: {
     'import/resolver': {
@@ -44,4 +47,4 @@ module.exports = {
       },
     },
   },
-};
+}

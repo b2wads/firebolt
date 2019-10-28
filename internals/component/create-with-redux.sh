@@ -104,16 +104,6 @@ $capitalizeName.propTypes = {}
 export default CSSModules($capitalizeName, styles);
 EOF
 
-echo 'Created Component'
-
-touch $path/$name/$name-constants.js
-cat > $path/$name/$name-constants.js <<EOF
-export const CONSTANT_NAME = 'CONSTANT_NAME';
-
-EOF
-
-echo 'Created Constants'
-
 touch $path/$name/$name-actions.js
 cat > $path/$name/$name-actions.js <<EOF
 import {

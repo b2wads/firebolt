@@ -47,10 +47,9 @@ path=$2
 capitalize
 camelCase
 
-mkdir $path/$name
+mkdir $path/$name -p
 echo 'Created folder'
 
-touch $path/$name/index.js
 cat > $path/$name/index.js <<EOF
 import $capitalizeName from './$name-component';
 
@@ -59,7 +58,6 @@ EOF
 
 echo 'Created index'
 
-touch $path/$name/$name-component.js
 cat > $path/$name/$name-component.js <<EOF
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -80,7 +78,6 @@ EOF
 
 echo 'Created Component'
 
-touch $path/$name/$name.spec.js
 cat > $path/$name/$name.spec.js <<EOF
 
 import { shallow } from 'enzyme'
@@ -102,7 +99,6 @@ EOF
 
 echo 'Created Test'
 
-touch $path/$name/$name.styl
 cat > $path/$name/$name.styl <<EOF
 /* ==========================================================================
    Variables

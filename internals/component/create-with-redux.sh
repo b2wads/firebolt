@@ -47,10 +47,9 @@ path=$2
 capitalize
 camelCase
 
-mkdir $path/$name
+mkdir $path/$name -p
 echo 'Created folder'
 
-touch $path/$name/index.js
 cat > $path/$name/index.js <<EOF
 import $capitalizeName from './$name-container';
 
@@ -59,7 +58,6 @@ EOF
 
 echo 'Created index'
 
-touch $path/$name/$name-container.js
 cat > $path/$name/$name-container.js <<EOF
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -85,7 +83,6 @@ EOF
 
 echo 'Created Container'
 
-touch $path/$name/$name-component.js
 cat > $path/$name/$name-component.js <<EOF
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -104,7 +101,6 @@ $capitalizeName.propTypes = {}
 export default CSSModules($capitalizeName, styles);
 EOF
 
-touch $path/$name/$name-actions.js
 cat > $path/$name/$name-actions.js <<EOF
 import {
   TYPE_NAME
@@ -121,7 +117,6 @@ EOF
 
 echo 'Created Actions'
 
-touch $path/$name/$name-reducer.js
 cat > $path/$name/$name-reducer.js <<EOF
 const initialState = {
 };
@@ -138,7 +133,6 @@ EOF
 
 echo 'Created Reducer'
 
-touch $path/$name/$name.spec.js
 cat > $path/$name/$name.spec.js <<EOF
 import { shallow } from 'enzyme'
 import $capitalizeName from './$name-component';
@@ -159,7 +153,6 @@ EOF
 
 echo 'Created Test'
 
-touch $path/$name/$name.styl
 cat > $path/$name/$name.styl <<EOF
 /* ==========================================================================
    Variables

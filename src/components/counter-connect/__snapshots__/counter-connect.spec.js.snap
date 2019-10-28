@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render element snapshot counter connect 1`] = `
+"<div>
+  <h1>
+    Componente conectado
+  </h1>
+  <div>
+    0
+  </div>
+  <Button onClick={{...}} disabled={false} color=\\"primary\\" size=\\"medium\\" type=\\"button\\" className={[undefined]} active={false}>
+    Aumentar valor
+  </Button>
+  <Button onClick={{...}} disabled={false} color=\\"primary\\" size=\\"medium\\" type=\\"button\\" className={[undefined]} active={false}>
+    Diminuir valor
+  </Button>
+  <Button onClick={{...}} disabled={false} color=\\"primary\\" size=\\"medium\\" type=\\"button\\" className={[undefined]} active={false}>
+    Zerar
+  </Button>
+</div>"
+`;

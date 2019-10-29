@@ -38,12 +38,22 @@ applyMiddleware(thunk) // remover
 2- Remover o import do css do Grimório em webpack.config.js
 
 ```
+// antes
+
 entry: {
   boilerplate: [
-    path.resolve( //remover
-    __dirname, //remover
-    '../node_modules/grimorio-ui/dist/grimorio-ui.min.css' //remover
-    ), //remover
+    path.resolve(
+    __dirname,
+    '../node_modules/grimorio-ui/dist/grimorio-ui.min.css'
+    ),
+    path.resolve(__dirname, '../src')
+  ]
+},
+
+// depois
+
+entry: {
+  boilerplate: [
     path.resolve(__dirname, '../src')
   ]
 },

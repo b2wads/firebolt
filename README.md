@@ -5,7 +5,7 @@ Esse repositório representa a esturura padrão para projetos React. Aqui estar�
 ## Commands
 
 * **yarn**: Instala os módulos do projeto
-* **yarn start:dev**: Start do projeto, rodando em [http://localhost:8080](http://localhost:8080.
+* **yarn start:dev**: Start do projeto, rodando em [http://localhost:8080](http://localhost:8080).
 * **yarn test**: Roda os testes do projeto, mostrando a cobertura.
 * **yarn run cypress:open**: Abre a interface do Cypress para você escolher um teste para rodar.
 * **yarn run cypress:run**: Roda os testes do Cypress no console.
@@ -50,12 +50,12 @@ Para remover alguma dependência desse projeto, leia a [documentação](./docs/0
 
 ## Padrões de código
 
-## Eslint
+### Eslint
 
 Esse projeto usa [eslint](http://eslint.org/) e o [.editorconfig](http://editorconfig.org/) está configurado para ter indentação de **2 espaços**. Você pode alterar isso no arquivo [.eslintrc](https://github.com/lyef/lyef-redux-boilerplate/blob/master/.eslintrc#L16).
 
 
-## Nomenclatura
+### Nomenclatura
 
 A nomenclatura segue as seguintes regras:
 

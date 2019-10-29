@@ -3,7 +3,7 @@
 exports[`prim 1`] = `
 "<Fragment>
   <Button onClick={[Function: onClick]} iconLeft=\\"whatshot\\" disabled={false} color=\\"primary\\" size=\\"medium\\" type=\\"button\\" className={[undefined]} active={false}>
-    hello
+    hello.
   </Button>
 </Fragment>"
 `;

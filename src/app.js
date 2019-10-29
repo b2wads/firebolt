@@ -9,7 +9,7 @@ export default class App extends PureComponent {
           onClick={() => window.alert('hello world!')}
           iconLeft="whatshot"
         >
-          hello
+          hello.
         </Button>
       </>
     )

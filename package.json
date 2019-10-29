@@ -1,7 +1,7 @@
 {
-  "name": "nodejs-boilerplate",
+  "name": "react-boilerplate",
   "version": "0.1.0",
-  "description": "Boilerplate para projetos NodeJS",
+  "description": "Boilerplate para projetos React",
   "main": "app.js",
   "dependencies": {
     "axios": "0.19.0",
@@ -61,11 +61,7 @@
     "start:dev": "webpack-dev-server --config ./webpack/webpack.config.js",
     "prebuild": "rm -rf public",
     "build": "webpack --config ./webpack/webpack.config.js",
-    "test": "./node_modules/.bin/jest --coverage",
-    "test:unit": "./node_modules/.bin/jest --coverage test test/unit/*",
-    "worker:<worker-name>": "node worker/<worker-name.js>",
-    "cron:<cron-name>": "node scripts/cron-<cron-name>.js",
-    "fix:<fix-name>": "node scripts/fix-<fix-name>.js"
+    "test": "./node_modules/.bin/jest --coverage"
   },
   "repository": {
     "type": "git",

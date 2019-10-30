@@ -29,6 +29,16 @@ jobs:
       - run:
           when: on_success
           command: npm run codecov
+      - run:
+          when: on_success
+          command: npm run codecov
+      - run: 
+          name: Cypress
+          command: npm run cypress:run
+      - store_artifacts:
+          path: qa/cypress/videos
+      - store_artifacts:
+          path: qa/cypress/screenshots
   node12x:
     <<: *template
     docker:

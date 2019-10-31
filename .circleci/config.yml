@@ -9,7 +9,7 @@ commands:
 jobs:
   node10x: &template
     docker:
-      - image: circleci/node:10-jessie
+      - image: node:10-jessie
         #auth:
         #username: $B2WADS_DOCKER_REGISTRY_USERNAME
         #password: $B2WADS_DOCKER_REGISTRY_PASSWORD
@@ -35,7 +35,7 @@ jobs:
       - run:
           when: on_success
           command: npm run codecov
-      - run: 
+      - run:
           name: Cypress
           command: npm run cypress:run
       - store_artifacts:
@@ -45,7 +45,7 @@ jobs:
   node12x:
     <<: *template
     docker:
-      - image: circleci/node:12
+      - image: node:12
       #- image: mongo:3.6
       #- image: elasticsearch:5
       #- image: rabbitmq:3.6-alpine

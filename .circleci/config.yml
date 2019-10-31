@@ -20,6 +20,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Update packages
+          command: apt-get update
+      - run:
           name: Install deps
           command: npm install
       - run:

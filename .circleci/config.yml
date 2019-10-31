@@ -20,14 +20,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Update packages
-          command: apt-get update
-      - run:
           name: Install deps
           command: npm install
-      - run:
-          name: Install Cypress libs
-          command: apt-get install -y xvfb libgtk-3-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2
       # - run:
       #     name: Format check
       #     command: npm run fmt:check
@@ -38,13 +32,6 @@ jobs:
       - run:
           when: on_success
           command: npm run codecov
-      - run:
-          name: Cypress
-          command: npm run cypress:run
-      - store_artifacts:
-          path: qa/cypress/videos
-      - store_artifacts:
-          path: qa/cypress/screenshots
   node12x:
     <<: *template
     docker:

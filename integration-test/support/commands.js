@@ -1,16 +1,16 @@
 Cypress.Commands.add('restoreLocalStorage', key => {
   cy.getCookie(key).then(({ value }) => {
-    localStorage.setItem(key, value);
-  });
-});
+    localStorage.setItem(key, value)
+  })
+})
 
 Cypress.Commands.add('setLocalStorage', key => {
-  cy.restoreLocalStorage(key);
-});
+  cy.restoreLocalStorage(key)
+})
 
 Cypress.Commands.add('login', () => {
   cy.request({
-    url: 'http://b2wads-api-staging-1.us-east-1.elasticbeanstalk.com/api/auth',
+    url: Cypress.env('API_URL'),
     method: 'POST',
     body: {
       email: Cypress.env('EMAIL'),
@@ -19,9 +19,9 @@ Cypress.Commands.add('login', () => {
   })
     .its('body')
     .then(resp => {
-      cy.setCookie('_user_seller', resp.token);
+      cy.setCookie(Cypress.env('JWT_KEY'), resp.token)
       Cypress.Cookies.defaults({
-        whitelist: '_user_seller',
-      });
-    });
-});
+        whitelist: Cypress.env('JWT_KEY'),
+      })
+    })
+})

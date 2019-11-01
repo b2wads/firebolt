@@ -1,10 +1,10 @@
 import { shallow } from 'enzyme'
 import React from 'react'
-import Counter from './counterConnect-component'
-import reducer, { INITIAL_STATE } from './counterConnect-reducer'
-import { increment, decrement, reset } from './counterConnect-action'
+import CounterConnect from './counter-connect-component'
+import reducer, { INITIAL_STATE } from './counter-connect-reducer'
+import { increment, decrement, reset } from './counter-connect-actions'
 
-const wrapper = shallow(<Counter />)
+const wrapper = shallow(<CounterConnect />)
 
 describe('Render element', () => {
   it('snapshot counter connect', () => {

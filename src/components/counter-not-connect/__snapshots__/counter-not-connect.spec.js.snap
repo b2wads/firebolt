@@ -2,9 +2,9 @@
 
 exports[`not connect snapshot counter not connect 1`] = `
 "<div>
-  <h1>
+  <h2>
     Componente não conectado
-  </h1>
+  </h2>
   <div className=\\"value\\">
     0
   </div>

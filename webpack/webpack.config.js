@@ -1,9 +1,18 @@
 const path = require('path')
-const ExtractCSS = require('mini-css-extract-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const cssNano = require('cssnano')
 
 module.exports = {
-  entry: path.resolve(__dirname, '../src'),
+  entry: {
+    boilerplate: [
+      path.resolve(
+        __dirname,
+        '../node_modules/grimorio-ui/dist/grimorio-ui.min.css'
+      ),
+      path.resolve(__dirname, '../src'),
+    ],
+  },
   output: {
     path: path.resolve(__dirname, '../public'),
     filename: 'bundle.js',
@@ -21,38 +30,9 @@ module.exports = {
         },
       },
       {
-        test: /\.styl$/,
-        include: [path.resolve(__dirname, '../src')],
-        use: [
-          {
-            loader: ExtractCSS.loader,
-            options: {
-              hmr: process.env.NODE_ENV === 'development',
-            },
-          },
-          {
-            loader: 'css-loader',
-            options: {},
-          },
-          'stylus-loader',
-        ],
-      },
-      {
         test: /\.css$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: ExtractCSS.loader,
-            options: {},
-          },
-          'css-loader',
-        ],
-      },
-      {
-        test: /\.css$/,
-        include: [path.resolve(__dirname, '../node_modules/grimorio-ui/dist')],
         sideEffects: true,
-        use: [ExtractCSS.loader, 'css-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /.*\.(gif|png|jpe?g)$/i,
@@ -60,11 +40,34 @@ module.exports = {
           loader: 'file-loader',
         },
       },
+      {
+        test: /\.styl$/,
+        include: [path.resolve(__dirname, '../src')],
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                localIdentName: '[name]_[local]',
+              },
+              importLoaders: true,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [cssNano({ preset: 'default' })],
+            },
+          },
+          'stylus-loader',
+        ],
+      },
     ],
   },
   plugins: [
-    new ExtractCSS({
-      filename: 'app.css',
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash].css',
     }),
     new HtmlWebpackPlugin({
       template: './index.html',

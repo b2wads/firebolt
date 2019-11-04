@@ -18,7 +18,7 @@ export default function CounterNotConnect() {
 
   return (
     <div>
-      <h1>Componente não conectado</h1>
+      <h2>Componente não conectado</h2>
       <div className="value">{counter}</div>
       <div>
         <Button className="increment-btn" onClick={handleIncrement}>

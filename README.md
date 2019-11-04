@@ -11,6 +11,7 @@ Esse repositório representa a esturura padrão para projetos React. Aqui estar�
 * **yarn run cypress:run**: Roda os testes do Cypress no console.
 * **COMP=nome-do-componente yarn create:redux**: Cria pasta com os arquivos de um componente conectado ao Redux
 * **COMP=nome-do-componente  yarn create:comp**: Cria pasta com os arquivos de um componente desconectado do Redux
+* **COMP=nome-do-componente  yarn create:view**: Cria pasta com os arquivos de um componente desconectado do Redux
 
 ## Estrutura de pastas
 

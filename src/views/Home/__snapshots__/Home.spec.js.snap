@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test render home page 1`] = `
+"<Fragment>
+  <h1>
+    Exemplos de componentes
+  </h1>
+  <Connect(CounterConnect) />
+  <CounterNotConnect />
+</Fragment>"
+`;

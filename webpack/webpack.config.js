@@ -10,15 +10,15 @@ module.exports = {
         __dirname,
         '../node_modules/grimorio-ui/dist/grimorio-ui.min.css'
       ),
-      path.resolve(__dirname, '../src')
-    ]
+      path.resolve(__dirname, '../src'),
+    ],
   },
   output: {
     path: path.resolve(__dirname, '../public'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'public')
+    contentBase: path.resolve(__dirname, 'public'),
   },
   module: {
     rules: [
@@ -26,19 +26,19 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
-        }
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.css$/,
         sideEffects: true,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /.*\.(gif|png|jpe?g)$/i,
         use: {
-          loader: 'file-loader'
-        }
+          loader: 'file-loader',
+        },
       },
       {
         test: /\.styl$/,
@@ -49,28 +49,28 @@ module.exports = {
             loader: 'css-loader',
             options: {
               modules: {
-                localIdentName: '[name]_[local]'
+                localIdentName: '[name]_[local]',
               },
-              importLoaders: true
-            }
+              importLoaders: true,
+            },
           },
           {
             loader: 'postcss-loader',
             options: {
-              plugins: () => [cssNano({ preset: 'default' })]
-            }
+              plugins: () => [cssNano({ preset: 'default' })],
+            },
           },
-          'stylus-loader'
-        ]
-      }
-    ]
+          'stylus-loader',
+        ],
+      },
+    ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].[hash].css'
+      filename: '[name].[hash].css',
     }),
     new HtmlWebpackPlugin({
-      template: './index.html'
-    })
-  ]
+      template: './index.html',
+    }),
+  ],
 }

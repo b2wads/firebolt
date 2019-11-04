@@ -1,12 +1,17 @@
-import React, { Component } from 'react'
-import MainButton from './components/button'
+import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import Routes from './routes'
+import store from './store'
 
-export default class App extends Component {
-  render() {
-    return (
-      <MainButton>
-        hello
-      </MainButton>
-    )
-  }
+function App() {
+  return (
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
+    </Provider>
+  )
 }
+
+export default App

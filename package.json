@@ -64,6 +64,7 @@
     "build": "webpack --config ./webpack/webpack.config.js",
     "create:redux": "bash ./internals/component/create-with-redux.sh $COMP ./src/components",
     "create:comp": "bash ./internals/component/create.sh $COMP ./src/components",
+    "create:view": "bash ./internals/component/create-with-redux.sh $COMP ./src/components",
     "test": "./node_modules/.bin/jest --coverage",
     "test:unit": "./node_modules/.bin/jest --coverage test test/unit/*"
   },

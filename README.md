@@ -9,6 +9,8 @@ Esse repositório representa a esturura padrão para projetos React. Aqui estar�
 * **yarn test**: Roda os testes do projeto, mostrando a cobertura.
 * **yarn run cypress:open**: Abre a interface do Cypress para você escolher um teste para rodar.
 * **yarn run cypress:run**: Roda os testes do Cypress no console.
+* **COMP=nome-do-componente yarn create:redux**: Cria pasta com os arquivos de um componente conectado ao Redux
+* **COMP=nome-do-componente  yarn create:comp**: Cria pasta com os arquivos de um componente desconectado do Redux
 
 ## Estrutura de pastas
 
@@ -16,6 +18,7 @@ Esse repositório representa a esturura padrão para projetos React. Aqui estar�
 ├── src
 │   ├── components
 │   ├── views
+│   │   └── element
 │   ├── config
 │   ├── helpers
 │   ├── services
@@ -39,6 +42,7 @@ Esse repositório representa a esturura padrão para projetos React. Aqui estar�
 - [Babel 7](https://babeljs.io/) - Compilador de Javascript.
 - [Webpack](https://webpack.github.io/) - Empacotador de módulos Javascript.
 - [Stylus](http://stylus-lang.com/) - Pré-processador CSS
+- [CSS Modules](https://github.com/css-modules/css-modules) - Processo de build para adicionar escopo às classes CSS
 - [Prettier](https://prettier.io/)
 - [Eslint](http://eslint.org/) - Linter para Javascript.
 - [Jest](https://jestjs.io/) - Framework de teste Javascript.
@@ -47,6 +51,24 @@ Esse repositório representa a esturura padrão para projetos React. Aqui estar�
 - [Grimorio](https://github.com/b2wads/grimorio-ui) - React UI Kit
 
 Para remover alguma dependência desse projeto, leia a [documentação](./docs/01-remove-dependencies.md)
+
+
+## Cypress
+
+Criamos alguns comando para ajudar no processo de testar uma plataforma com autenticação. Para conhecer esses comandos e suas variáveis de ambiente, leia a [documentação](./docs/02-cypress-commands.md)
+
+
+## Estrutura de pastas
+
+### Component
+A pasta Component foi criada com o propósito de guardar os principais componentes da plataforma. Esses componentes devem ser pensados como pedaços de código reaproveitáveis em todo o projeto. Alguns exemplos são: Botão, Tabela, Dropdown, etc.
+
+### View
+A pasta View foi pensada para receber as páginas principais da plataforma. Alguns exemplos comuns de páginas são: Home, Login e Dashboard. Essas views são compostas por outros componentes, ou seja, utilizarão os componentes da pasta Component (Botões, Tabelas, etc).
+
+### Element
+A pasta Element está localizada dentro das pastas de views. Ela foi pensada para receber os componentes específicos de uma determinada view, ou seja, componentes que não serão reaproveitados em outras partes da plataforma. De um modo geral, os elements são uma maneira de quebrar melhor a estrutura de uma view, para que o arquivo não fique muito grande e complexo.
+
 
 ## Padrões de código
 
@@ -71,5 +93,6 @@ A nomenclatura segue as seguintes regras:
 ## Manual
 
 1. [Remover Dependências](./docs/01-remove-dependencies.md)
+2. [Comandos Cypress](./docs/02-cypress-commands.md)
 2. [Git Flow](./docs/03-git-flow.md)
-3. [Commits](./docs/03-commits.md)
+3. [Commits](./docs/04-commits.md)

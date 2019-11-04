@@ -20,6 +20,30 @@ src/store
 
 # Como remover o Redux Thunk:
 
+1- No arquivo webpack.config.js, remover a parte do código que adiciona hash às classes
+
+```
+ modules: {
+  localIdentName: '[name]_[local]' //remover
+ }
+
+```
+
+2- Remover os imports de estilo dos arquivos JS. Exemplo:
+
+```
+import styles from './button.styl' //remover
+
+const MainButton = ({ children }) => (
+  <Button className={styles.customButton}> //remover styles.customButton 
+    {children}
+  </Button>
+)
+
+```
+
+# Como remover o CSS Modules:
+
 1- Remover do package.json a dependência "redux-thunk"
 
 2- No arquivo src/store/index.js, remover o import e o uso do componente
@@ -28,7 +52,6 @@ src/store
 import thunk from 'redux-thunk' //remover
 
 applyMiddleware(thunk) // remover
-
 ```
 
 # Como remover o Grimório (React UI Kit):

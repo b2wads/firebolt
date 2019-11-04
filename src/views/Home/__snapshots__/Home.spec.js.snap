@@ -7,5 +7,11 @@ exports[`test render home page 1`] = `
   </h1>
   <Connect(CounterConnect) />
   <CounterNotConnect />
+  <h2>
+    Componente com CSS Modules
+  </h2>
+  <MainButton>
+    hello
+  </MainButton>
 </Fragment>"
 `;

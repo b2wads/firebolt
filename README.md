@@ -51,12 +51,12 @@ Esse repositório representa a esturura padrão para projetos React. Aqui estar�
 - [Cypress](https://www.cypress.io/) - Framework para teste de integração (End to end)
 - [Grimorio](https://github.com/b2wads/grimorio-ui) - React UI Kit
 
-Para remover alguma dependência desse projeto, leia a [documentação](./docs/01-remove-dependencies.md)
+Para remover alguma dependência desse projeto, leia a [documentação](https://github.com/b2wads/react-boilerplate/wiki/Remover-depend%C3%AAncias)
 
 
 ## Cypress
 
-Criamos alguns comando para ajudar no processo de testar uma plataforma com autenticação. Para conhecer esses comandos e suas variáveis de ambiente, leia a [documentação](./docs/02-cypress-commands.md)
+Criamos alguns comando para ajudar no processo de testar uma plataforma com autenticação. Para conhecer esses comandos e suas variáveis de ambiente, leia a [documentação](https://github.com/b2wads/react-boilerplate/wiki/Comandos-do-Cypress)
 
 
 ## Estrutura de pastas
@@ -94,6 +94,6 @@ A nomenclatura segue as seguintes regras:
 ## Manual
 
 1. [Remover Dependências](https://github.com/b2wads/react-boilerplate/wiki/Remover-depend%C3%AAncias)
-2. [Comandos Cypress](./docs/02-cypress-commands.md)
-2. [Git Flow](./docs/03-git-flow.md)
-3. [Commits](./docs/04-commits.md)
+2. [Comandos Cypress](https://github.com/b2wads/react-boilerplate/wiki/Comandos-do-Cypress)
+2. [Git Flow](https://github.com/b2wads/react-boilerplate/wiki/Git-Flow)
+3. [Commits](https://github.com/b2wads/react-boilerplate/wiki/Commits)

@@ -11,7 +11,7 @@ Esse repositório representa a esturura padrão para projetos React. Aqui estar�
 * **yarn run cypress:run**: Roda os testes do Cypress no console.
 * **COMP=nome-do-componente yarn create:redux**: Cria pasta com os arquivos de um componente conectado ao Redux
 * **COMP=nome-do-componente  yarn create:comp**: Cria pasta com os arquivos de um componente desconectado do Redux
-* **COMP=nome-do-componente  yarn create:view**: Cria pasta com os arquivos de um componente desconectado do Redux
+* **COMP=nome-do-componente  yarn create:view**: Cria pasta com os arquivos de uma view conectada ao Redux
 
 ## Estrutura de pastas
 
@@ -93,7 +93,7 @@ A nomenclatura segue as seguintes regras:
 
 ## Manual
 
-1. [Remover Dependências](./docs/01-remove-dependencies.md)
+1. [Remover Dependências](https://github.com/b2wads/react-boilerplate/wiki/Remover-depend%C3%AAncias)
 2. [Comandos Cypress](./docs/02-cypress-commands.md)
 2. [Git Flow](./docs/03-git-flow.md)
 3. [Commits](./docs/04-commits.md)

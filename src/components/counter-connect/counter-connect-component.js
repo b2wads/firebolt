@@ -28,7 +28,7 @@ CounterConnect.defaultProps = {
 
 CounterConnect.propTypes = {
   counter: PropType.number,
-  increment: PropType.func,
-  decrement: PropType.func,
-  reset: PropType.func,
+  increment: PropType.oneOfType([PropType.func, PropType.object]),
+  decrement: PropType.oneOfType([PropType.func, PropType.object]),
+  reset: PropType.oneOfType([PropType.func, PropType.object]),
 }

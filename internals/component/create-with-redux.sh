@@ -41,8 +41,8 @@ camelCase() {
 
 clear
 
-name=$1
-path=$2
+path=$1
+name=$2
 
 capitalize
 camelCase

@@ -1,15 +1,25 @@
 const path = require('path')
-const ExtractCSS = require('mini-css-extract-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const cssNano = require('cssnano')
+const postcssCustomProperties = require('postcss-custom-properties')
 
 module.exports = {
-  entry: path.resolve(__dirname, '../src'),
+  entry: {
+    boilerplate: [
+      path.resolve(
+        __dirname,
+        '../node_modules/grimorio-ui/lib/css/grimorio-ui-custom.min.css'
+      ),
+      path.resolve(__dirname, '../src'),
+    ],
+  },
   output: {
     path: path.resolve(__dirname, '../public'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'public')
+    contentBase: path.resolve(__dirname, 'public'),
   },
   module: {
     rules: [
@@ -17,63 +27,74 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
-        }
+          loader: 'babel-loader',
+        },
+      },
+      // {
+      //   test: /\.css$/,
+      //   sideEffects: true,
+      //   use: [MiniCssExtractPlugin.loader, 'css-loader'],
+      // },
+      {
+        test: /\.css/,
+        sideEffects: true,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [
+                postcssCustomProperties({
+                  preserve: false, // Opção para sobrescrever as variaveis
+                  importFrom: [
+                    './node_modules/grimorio-ui/lib/css/variables.css',
+                    './src/assets/css/variables.css',
+                  ],
+                }),
+              ],
+            },
+          },
+        ],
+      },
+      {
+        test: /.*\.(gif|png|jpe?g)$/i,
+        use: {
+          loader: 'file-loader',
+        },
       },
       {
         test: /\.styl$/,
         include: [path.resolve(__dirname, '../src')],
         use: [
-          {
-            loader: ExtractCSS.loader,
-            options: {
-              hmr: process.env.NODE_ENV === 'development'
-            }
-          },
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
-            options: {}
+            options: {
+              modules: {
+                localIdentName: '[name]_[local]',
+              },
+              importLoaders: true,
+            },
           },
-          'stylus-loader'
-        ]
-      },
-      {
-        test: /\.css$/,
-        exclude: /node_modules/,
-        use: [
           {
-            loader: ExtractCSS.loader,
-            options: {}
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [cssNano({ preset: 'default' })],
+            },
           },
-          'css-loader'
-        ]
-      },
-      {
-        test: /\.css$/,
-        include: [
-          path.resolve(__dirname, '../node_modules/grimorio-ui/dist'),
-          path.resolve(
-            __dirname,
-            '../node_modules/react-dates/lib/css/_datepicker.css'
-          )
+          'stylus-loader',
         ],
-        sideEffects: true,
-        use: [ExtractCSS.loader, 'css-loader']
       },
-      {
-        test: /.*\.(gif|png|jpe?g)$/i,
-        use: {
-          loader: 'file-loader'
-        }
-      }
-    ]
+    ],
   },
   plugins: [
-    new ExtractCSS({
-      filename: 'app.css'
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash].css',
     }),
     new HtmlWebpackPlugin({
-      template: './index.html'
-    })
-  ]
+      template: './index.html',
+    }),
+  ],
 }

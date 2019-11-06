@@ -30,17 +30,11 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
-      // {
-      //   test: /\.css$/,
-      //   sideEffects: true,
-      //   use: [MiniCssExtractPlugin.loader, 'css-loader'],
-      // },
       {
         test: /\.css/,
         sideEffects: true,
         use: [
           MiniCssExtractPlugin.loader,
-          'style-loader',
           'css-loader',
           {
             loader: 'postcss-loader',

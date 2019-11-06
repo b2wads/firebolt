@@ -1,1 +1,10 @@
-{}
+{
+  "baseUrl": "http://localhost:8080",
+  "fileServerFolder": "./integration-test",
+  "videosFolder": "./integration-test/videos",
+  "integrationFolder": "./integration-test/integration",
+  "screenshotsFolder": "./integration-test/screenshots",
+  "supportFile": "./integration-test/support/index.js",
+  "fixturesFolder": false,
+  "pluginsFile": false
+}

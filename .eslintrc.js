@@ -2,6 +2,9 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
+    jest: true,
+    mocha: true,
+    "cypress/globals": true
   },
   extends: [
     'airbnb',
@@ -20,7 +23,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['react', 'jsx-a11y', 'import', 'react-hooks', 'prettier'],
+  plugins: ['react', 'jsx-a11y', 'import', 'react-hooks', 'prettier', 'cypress'],
   rules: {
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],

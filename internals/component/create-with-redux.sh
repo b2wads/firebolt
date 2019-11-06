@@ -138,6 +138,17 @@ import { shallow } from 'enzyme'
 import $capitalizeName from './$name-component';
 
 /** @test {$capitalizeName} */
+jest.mock('react-redux', () => {
+  return {
+    connect: (mapStateToProps, mapDispatchToProps) => ReactComponent => ({
+      mapStateToProps,
+      mapDispatchToProps,
+      ReactComponent,
+    }),
+    Provider: ({ children }) => children,
+  }
+})
+
 describe('$capitalizeName component', () => {
 /** @test {$capitalizeName#render} */
   describe('#render', () => {
@@ -147,6 +158,17 @@ describe('$capitalizeName component', () => {
       );
       expect(wrapper.length).to.equal(1);
     });
+
+    it('test mapStateToProps', () => {
+      const state = {}
+      const resp = {}
+      expect($capitalizeName.mapStateToProps(state)).toEqual(resp)
+    })
+
+    it('test mapDispatchToProps ', () => {
+      const resp = {}
+      expect($capitalizeName.mapDispatchToProps).toEqual(resp)
+    })
   });
 });
 EOF

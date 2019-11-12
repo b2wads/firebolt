@@ -1,7 +1,7 @@
 {
-  "name": "nodejs-boilerplate",
+  "name": "react-boilerplate",
   "version": "0.1.0",
-  "description": "Boilerplate para projetos NodeJS",
+  "description": "Boilerplate para projetos React",
   "main": "app.js",
   "dependencies": {
     "axios": "0.19.0",

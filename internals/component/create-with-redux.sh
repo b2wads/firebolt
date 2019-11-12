@@ -160,13 +160,17 @@ describe('$capitalizeName component', () => {
     });
 
     it('test mapStateToProps', () => {
-      const state = {}
+      const state = {
+        // inclua aqui seus estados conectados
+      }
       const resp = {}
       expect($capitalizeName.mapStateToProps(state)).toEqual(resp)
     })
 
     it('test mapDispatchToProps ', () => {
-      const resp = {}
+      const resp = {
+        // inclua aqui suas actions
+      }
       expect($capitalizeName.mapDispatchToProps).toEqual(resp)
     })
   });

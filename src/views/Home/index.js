@@ -1,7 +1,7 @@
 import React from 'react'
 import CounterNotConnect from '~/components/counter-not-connect'
 import CounterConnect from '~/components/counter-connect'
-import MainButton from '~/components/button'
+import MainButton from '~/components/button/button'
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
       <CounterConnect />
       <CounterNotConnect />
       <h2>Componente com CSS Modules</h2>
-      <MainButton>hello</MainButton>
+      <MainButton>Botão com margem</MainButton>
     </>
   )
 }

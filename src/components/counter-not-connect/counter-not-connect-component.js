@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button } from 'grimorio-ui'
+import { Button } from '@b2wads/grimorio-ui'
 
 export default function CounterNotConnect() {
   const [counter, setCounter] = useState(0)

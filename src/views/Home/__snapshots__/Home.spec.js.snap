@@ -11,7 +11,7 @@ exports[`test render home page 1`] = `
     Componente com CSS Modules
   </h2>
   <MainButton>
-    hello
+    Botão com margem
   </MainButton>
 </Fragment>"
 `;

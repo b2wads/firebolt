@@ -2,13 +2,14 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const cssNano = require('cssnano')
+const postcssCustomProperties = require('postcss-custom-properties')
 
 module.exports = {
   entry: {
     boilerplate: [
       path.resolve(
         __dirname,
-        '../node_modules/grimorio-ui/dist/grimorio-ui.min.css'
+        '../node_modules/@b2wads/grimorio-ui/lib/css/grimorio-ui-custom.min.css'
       ),
       path.resolve(__dirname, '../src'),
     ],
@@ -30,9 +31,26 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
+        test: /\.css/,
         sideEffects: true,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [
+                postcssCustomProperties({
+                  preserve: false, // Opção para sobrescrever as variaveis
+                  importFrom: [
+                    './node_modules/@b2wads/grimorio-ui/lib/css/variables.css',
+                    './src/assets/css/variables.css',
+                  ],
+                }),
+              ],
+            },
+          },
+        ],
       },
       {
         test: /.*\.(gif|png|jpe?g)$/i,

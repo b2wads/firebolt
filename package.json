@@ -4,9 +4,9 @@
   "description": "Boilerplate para projetos NodeJS",
   "main": "app.js",
   "dependencies": {
+    "@b2wads/grimorio-ui": "^7.0.1",
     "axios": "0.19.0",
     "enzyme": "3.10.0",
-    "grimorio-ui": "./packages/grimorio-ui-6.2.0.tgz",
     "immer": "^4.0.1",
     "prop-types": "^15.7.2",
     "react": "16.8.6",

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Button } from 'grimorio-ui'
+import { Button } from '@b2wads/grimorio-ui'
 import styles from './button.styl'
 
 const MainButton = ({ children }) => (

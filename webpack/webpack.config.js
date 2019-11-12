@@ -9,7 +9,7 @@ module.exports = {
     boilerplate: [
       path.resolve(
         __dirname,
-        '../node_modules/grimorio-ui/lib/css/grimorio-ui-custom.min.css'
+        '../node_modules/@b2wads/grimorio-ui/lib/css/grimorio-ui-custom.min.css'
       ),
       path.resolve(__dirname, '../src'),
     ],
@@ -43,7 +43,7 @@ module.exports = {
                 postcssCustomProperties({
                   preserve: false, // Opção para sobrescrever as variaveis
                   importFrom: [
-                    './node_modules/grimorio-ui/lib/css/variables.css',
+                    './node_modules/@b2wads/grimorio-ui/lib/css/variables.css',
                     './src/assets/css/variables.css',
                   ],
                 }),

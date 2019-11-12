@@ -2,60 +2,62 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
-    "jest/globals": true,
+    'jest/globals': true,
     jest: true,
     mocha: true,
-    "cypress/globals": true
   },
-  extends: ["airbnb", "prettier", "prettier/react"],
+  extends: ['airbnb', 'prettier', 'prettier/react'],
   globals: {
-    Atomics: "readonly",
-    SharedArrayBuffer: "readonly",
-    jest: true
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+    jest: true,
   },
-  parser: "babel-eslint",
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 2018,
-    sourceType: "module"
+    sourceType: 'module',
   },
   plugins: [
-    "react",
-    "jsx-a11y",
-    "import",
-    "react-hooks",
-    "prettier",
-    "jest",
-    "cypress"
+    'react',
+    'jsx-a11y',
+    'import',
+    'react-hooks',
+    'prettier',
+    'jest',
+    'cypress',
   ],
   rules: {
-    "prettier/prettier": "error",
-    "react/jsx-filename-extension": ["error", { extensions: [".js", ".jsx"] }],
-    "import/prefer-default-export": "off",
-    "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
-    "react/jsx-one-expression-per-line": "off",
-    "global-require": "off",
-    "react-native/no-raw-text": "off",
-    "no-param-reassign": "off",
-    "no-underscore-dangle": "off",
-    "react/jsx-props-no-spreading": "off",
-    camelcase: "off",
-    "no-console": ["error", { allow: ["tron"] }],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "jest/no-disabled-tests": "warn",
-    "jest/no-focused-tests": "error",
-    "jest/no-identical-title": "error",
-    "jest/prefer-to-have-length": "warn",
-    "jest/valid-expect": "error"
+    'prettier/prettier': 'error',
+    'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
+    'import/prefer-default-export': 'off',
+    'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    'react/jsx-one-expression-per-line': 'off',
+    'global-require': 'off',
+    'react-native/no-raw-text': 'off',
+    'no-param-reassign': 'off',
+    'no-underscore-dangle': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    camelcase: 'off',
+    'no-console': ['error', { allow: ['tron'] }],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    'jest/no-disabled-tests': 'warn',
+    'jest/no-focused-tests': 'error',
+    'jest/no-identical-title': 'error',
+    'jest/prefer-to-have-length': 'warn',
+    'jest/valid-expect': 'error',
+    'cypress/no-assigning-return-values': 'error',
+    'cypress/no-unnecessary-waiting': 'error',
+    'cypress/assertion-before-screenshot': 'warn',
   },
   settings: {
-    "import/resolver": {
-      "babel-plugin-root-import": {
-        rootPathSuffix: "src"
-      }
-    }
-  }
-};
+    'import/resolver': {
+      'babel-plugin-root-import': {
+        rootPathSuffix: 'src',
+      },
+    },
+  },
+}

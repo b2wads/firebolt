@@ -25,7 +25,6 @@ export default function CounterNotConnect() {
         <Button className="increment-btn" onClick={handleIncrement}>
           Aumentar valor
         </Button>
-        <img src={Image} heigth={60} width={60} alt="tetesss" />
         <Button className="decrement-btn" onClick={handleDecrement}>
           Diminuir valor
         </Button>

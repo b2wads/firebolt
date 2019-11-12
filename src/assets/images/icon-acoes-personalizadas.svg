@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="76.346" height="75.064" viewBox="0 0 76.346 75.064">
+    <defs>
+        <style>
+            .cls-1{fill:#fff}.cls-1,.cls-2,.cls-3{fill-rule:evenodd}.cls-2,.cls-4{fill:none;stroke:#899397;stroke-width:2px}.cls-3{fill:rgba(137,147,151,.3);opacity:.4}.cls-4{stroke-linecap:round}.cls-5{fill:#7fd9ca}.cls-6{fill:#00b395}
+        </style>
+    </defs>
+    <g id="icon-acoes-personalizadas" transform="translate(1 -34)">
+        <g id="_91-right-sidebar-user-interface-communication-webby" data-name="91-right-sidebar-user-interface-communication-webby" transform="translate(0 35)">
+            <path id="Fill-93" d="M0 0h74.346v73.064H0z" class="cls-1"/>
+            <path id="Stroke-94" d="M0 0h74.346v73.064H0z" class="cls-2"/>
+            <path id="Fill-95" d="M0 0h74.346v15.382H0z" class="cls-3"/>
+            <path id="Stroke-96" d="M0 0h74.346v15.382H0z" class="cls-2"/>
+            <path id="Fill-943" d="M10.691 6.845A3.845 3.845 0 1 1 6.845 3a3.845 3.845 0 0 1 3.845 3.845z" class="cls-1" transform="translate(.845 .845)"/>
+            <path id="Stroke-944" d="M10.691 6.845A3.845 3.845 0 1 1 6.845 3a3.845 3.845 0 0 1 3.845 3.845z" class="cls-2" transform="translate(.845 .845)"/>
+            <path id="Fill-945" d="M19.691 6.845A3.845 3.845 0 1 1 15.845 3a3.845 3.845 0 0 1 3.845 3.845z" class="cls-1" transform="translate(3.382 .845)"/>
+            <path id="Stroke-946" d="M19.691 6.845A3.845 3.845 0 1 1 15.845 3a3.845 3.845 0 0 1 3.845 3.845z" class="cls-2" transform="translate(3.382 .845)"/>
+            <path id="Fill-947" d="M28.691 6.845A3.845 3.845 0 1 1 24.845 3a3.845 3.845 0 0 1 3.845 3.845z" class="cls-1" transform="translate(5.918 .845)"/>
+            <path id="Stroke-948" d="M28.691 6.845A3.845 3.845 0 1 1 24.845 3a3.845 3.845 0 0 1 3.845 3.845z" class="cls-2" transform="translate(5.918 .845)"/>
+        </g>
+        <g id="line">
+            <path id="Caminho_475" d="M0 0h32" class="cls-4" data-name="Caminho 475" transform="translate(21.5 94.236)"/>
+            <path id="Linha_25" d="M0 0h32" class="cls-4" data-name="Linha 25" transform="translate(21.5 98.236)"/>
+        </g>
+        <g id="star" transform="translate(21 43.725)">
+            <path id="Caminho_476" d="M17.053 19.569l-3.983 7.89-8.757 1.317 6.324 6.306-1.48 8.663 8.257-4.4 7.737 4.16-1.716-8.928 6.437-6.077-9.2-1.2z" class="cls-5" data-name="Caminho 476" transform="translate(-1 -.953)"/>
+            <path id="Caminho_474" d="M27.962 21.114a.781.781 0 0 0-.626-.529L18.6 19.344l-3.931-7.9a.779.779 0 0 0-.7-.431.774.774 0 0 0-.7.437L9.4 19.373l-8.735 1.3a.781.781 0 0 0-.626.529.767.767 0 0 0 .2.793l6.339 6.143-1.465 8.7a.78.78 0 0 0 .764.908.738.738 0 0 0 .362-.092l7.8-4.132 7.821 4.086a.794.794 0 0 0 .356.086.78.78 0 0 0 .776-.776.606.606 0 0 0-.023-.178l-1.511-8.649 6.3-6.178a.76.76 0 0 0 .204-.799zm-7.873 6.155a.767.767 0 0 0-.218.69l1.315 7.541-6.793-3.546a.786.786 0 0 0-.724 0L6.9 35.544l1.27-7.557a.775.775 0 0 0-.224-.684L2.451 21.97l7.58-1.126a.77.77 0 0 0 .58-.425l3.369-6.879 3.413 6.86a.789.789 0 0 0 .586.425l7.586 1.08z" class="cls-6" data-name="Caminho 474" transform="translate(2 6)"/>
+        </g>
+    </g>
+</svg>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Button } from '@b2wads/grimorio-ui'
+import Image from '~/assets/images/icon-acoes-personalizadas.svg'
 
 export default function CounterNotConnect() {
   const [counter, setCounter] = useState(0)
@@ -24,6 +25,7 @@ export default function CounterNotConnect() {
         <Button className="increment-btn" onClick={handleIncrement}>
           Aumentar valor
         </Button>
+        <img src={Image} heigth={60} width={60} alt="tetesss" />
         <Button className="decrement-btn" onClick={handleDecrement}>
           Diminuir valor
         </Button>

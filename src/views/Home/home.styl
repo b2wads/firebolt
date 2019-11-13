@@ -1,0 +1,70 @@
+span, li {
+  font-size: 16px;
+}
+
+h2 {
+  text-decoration: underline;
+  margin: 15px 0px;
+}
+
+h3 {
+  font-weight: 100;
+}
+
+.container {
+  display: flex;
+  flexDirection: row;
+  justifyContent: space-between;
+}
+
+.exampleComponents {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+
+  h1 {
+    margin-bottom: 50px;
+  }
+}
+
+.instructions {
+  marginTop: 40px;
+  width: 50%;
+  margin-left: 90px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: black;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    -webkit-animation: rotation 10s linear infinite;
+    -moz-animation: rotation 10s linear infinite;
+    animation: rotation 10s linear infinite;
+  }
+
+  h1 {
+    color: #fff;
+    margin-top: 50px;
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: translate(-200%) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: translate(200%) rotate(359deg);
+  }
+}

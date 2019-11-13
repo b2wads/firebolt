@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Button } from '@b2wads/grimorio-ui'
-import Image from '~/assets/images/icon-acoes-personalizadas.svg'
+import styles from './counter-not-connect.styl'
 
 export default function CounterNotConnect() {
   const [counter, setCounter] = useState(0)
@@ -18,17 +18,33 @@ export default function CounterNotConnect() {
   }
 
   return (
-    <div>
-      <h2>Componente não conectado</h2>
-      <div className="value">{counter}</div>
+    <div className={styles.connectNotComponent}>
+      <span>
+        Componente não conectado -{' '}
+        <strong>
+          Valor:<span className="value">{counter}</span>
+        </strong>
+      </span>
       <div>
-        <Button className="increment-btn" onClick={handleIncrement}>
+        <Button
+          id="increment-btn"
+          className={styles.actionButton}
+          onClick={handleIncrement}
+        >
           Aumentar valor
         </Button>
-        <Button className="decrement-btn" onClick={handleDecrement}>
+        <Button
+          id="decrement-btn"
+          onClick={handleDecrement}
+          className={styles.actionButton}
+        >
           Diminuir valor
         </Button>
-        <Button className="reset-btn" onClick={handleReset}>
+        <Button
+          id="reset-btn"
+          onClick={handleReset}
+          className={styles.actionButton}
+        >
           Zerar
         </Button>
       </div>

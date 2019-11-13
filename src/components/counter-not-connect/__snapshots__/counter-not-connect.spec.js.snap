@@ -1,21 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`not connect snapshot counter not connect 1`] = `
-"<div>
-  <h2>
-    Componente não conectado
-  </h2>
-  <div className=\\"value\\">
-    0
-  </div>
+"<div className={[undefined]}>
+  <span>
+    Componente não conectado -
+     
+    <strong>
+      Valor:
+      <span className=\\"value\\">
+        0
+      </span>
+    </strong>
+  </span>
   <div>
-    <Button className=\\"increment-btn\\" onClick={[Function: handleIncrement]} disabled={false} color=\\"primary\\" size=\\"medium\\" type=\\"button\\" active={false}>
+    <Button id=\\"increment-btn\\" className={[undefined]} onClick={[Function: handleIncrement]} disabled={false} color=\\"primary\\" size=\\"medium\\" type=\\"button\\" active={false}>
       Aumentar valor
     </Button>
-    <Button className=\\"decrement-btn\\" onClick={[Function: handleDecrement]} disabled={false} color=\\"primary\\" size=\\"medium\\" type=\\"button\\" active={false}>
+    <Button id=\\"decrement-btn\\" onClick={[Function: handleDecrement]} className={[undefined]} disabled={false} color=\\"primary\\" size=\\"medium\\" type=\\"button\\" active={false}>
       Diminuir valor
     </Button>
-    <Button className=\\"reset-btn\\" onClick={[Function: handleReset]} disabled={false} color=\\"primary\\" size=\\"medium\\" type=\\"button\\" active={false}>
+    <Button id=\\"reset-btn\\" onClick={[Function: handleReset]} className={[undefined]} disabled={false} color=\\"primary\\" size=\\"medium\\" type=\\"button\\" active={false}>
       Zerar
     </Button>
   </div>

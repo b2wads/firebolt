@@ -18,17 +18,17 @@ describe('not connect', () => {
   })
 
   it('increments value when clicking +1', () => {
-    wrapper.find('.increment-btn').simulate('click')
+    wrapper.find('#increment-btn').simulate('click')
     expect(wrapper.find('.value').text()).toEqual('1')
   })
 
   it('decrement value when clicking -1', () => {
-    wrapper.find('.decrement-btn').simulate('click')
+    wrapper.find('#decrement-btn').simulate('click')
     expect(wrapper.find('.value').text()).toEqual('-1')
   })
 
   it('reset value for 0', () => {
-    wrapper.find('.reset-btn').simulate('click')
+    wrapper.find('#reset-btn').simulate('click')
     expect(wrapper.find('.value').text()).toEqual('0')
   })
 })

@@ -1,17 +1,17 @@
-import React, { PureComponent } from 'react'
-import { Button } from 'grimorio-ui'
+import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import Routes from './routes'
+import store from './reducers'
 
-export default class App extends PureComponent {
-  render() {
-    return (
-      <>
-        <Button
-          onClick={() => window.alert('hello world!')}
-          iconLeft="whatshot"
-        >
-          hello
-        </Button>
-      </>
-    )
-  }
+function App() {
+  return (
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
+    </Provider>
+  )
 }
+
+export default App

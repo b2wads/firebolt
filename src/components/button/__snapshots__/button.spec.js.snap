@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`prim 1`] = `"<Button onClick={[Function: onClick]} iconLeft=\\"whatshot\\" className={[undefined]} disabled={false} color=\\"primary\\" size=\\"medium\\" type=\\"button\\" active={false} />"`;

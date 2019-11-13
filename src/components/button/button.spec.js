@@ -1,18 +1,22 @@
 import { shallow } from 'enzyme'
-import App from './app'
 import React from 'react'
 
-import { Button } from 'grimorio-ui'
+import { Button } from '@b2wads/grimorio-ui'
+import MainButton from './button'
 
 const props = {
-  onClick: jest.fn()
+  onClick: jest.fn(),
 }
-const wrapper = shallow(<App {...props} />)
+const wrapper = shallow(<MainButton {...props} />)
 
 it('prim', () => {
+  console.log(wrapper.html())
   window.alert = jest.fn()
   jest.spyOn(window, 'alert')
   expect(wrapper.debug()).toMatchSnapshot()
-  wrapper.find(Button).props().onClick()
+  wrapper
+    .find(Button)
+    .props()
+    .onClick()
   expect(window.alert).toHaveBeenCalled()
 })

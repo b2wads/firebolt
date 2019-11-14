@@ -13,15 +13,48 @@ h3 {
 
 .container {
   display: flex;
-  flexDirection: row;
-  justifyContent: space-between;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.listDependencies {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+
+  div {
+    li {
+      align-items: center;
+      border: 1px solid;
+      width: 25%;
+
+      img {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.firstNames {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.secondNames {
+  display: flex;
+  justify-content: space-between;
 }
 
 .exampleComponents {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  width: 50%;
 
   h1 {
     margin-bottom: 50px;
@@ -29,9 +62,23 @@ h3 {
 }
 
 .instructions {
-  marginTop: 40px;
   width: 50%;
   margin-left: 90px;
+}
+
+.teste {
+  align-items: center;
+  width: 20%;
+}
+
+:global(.grm-panel__content) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span {
+    margin-top: 5px;
+  }
 }
 
 .content {

@@ -6559,7 +6559,7 @@ react-addons-shallow-compare@^15.6.2:
     fbjs "^0.8.4"
     object-assign "^4.1.0"
 
-react-css-modules@4.7.11:
+react-css-modules@4.7.11, react-css-modules@^4.7.11:
   version "4.7.11"
   resolved "https://registry.yarnpkg.com/react-css-modules/-/react-css-modules-4.7.11.tgz#e9bc7ac6e3dd7e71c8e46e9d22c1d0abb2110682"
   integrity sha512-ke/zMcBKQyq7x4I5CREzeA/cZSg7MW/Kx23L1OICd+PXKNq++fMdAJDeDLFYkDY28TwuAHpwsKxDYEVjpEMkmQ==

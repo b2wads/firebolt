@@ -86,7 +86,6 @@ echo 'Created Container'
 cat > $path/$name/$name-component.js <<EOF
 import React from 'react';
 import PropTypes from 'prop-types';
-import CSSModules from 'react-css-modules';
 
 import styles from './$name.styl';
 
@@ -98,7 +97,7 @@ function $capitalizeName() {
 
 $capitalizeName.propTypes = {}
 
-export default CSSModules($capitalizeName, styles);
+export default $capitalizeName;
 EOF
 
 cat > $path/$name/$name-actions.js <<EOF

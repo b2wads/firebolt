@@ -134,7 +134,8 @@ echo 'Created Reducer'
 
 cat > $path/$name/$name.spec.js <<EOF
 import { shallow } from 'enzyme'
-import $capitalizeName from './$name-component';
+import React from 'react'
+import $capitalizeName from './$name-component'
 
 /** @test {$capitalizeName} */
 jest.mock('react-redux', () => {

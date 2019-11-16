@@ -11,64 +11,50 @@ h3 {
   font-weight: 100;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span {
+    font-weight: bold;
+  }
+
+  a {
+    margin-left: 5px;
+  }
+}
+
 .container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.listDependencies {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-
-  div {
-    li {
-      align-items: center;
-      border: 1px solid;
-      width: 25%;
-
-      img {
-        margin-bottom: 10px;
-      }
-    }
-  }
-
-  li {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.firstNames {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 25px;
-  margin-top: 25px;
-}
-
-.secondNames {
-  display: flex;
-  justify-content: space-between;
-}
-
 .exampleComponents {
   display: flex;
   flex-direction: column;
+  padding-right: 40px;
+  margin-top: 41px;
 
   h1 {
     margin-bottom: 50px;
   }
 }
 
-.instructions {
+.structure {
   width: 50%;
-  margin-left: 90px;
+  padding-left: 40px;
 }
 
-.teste {
-  align-items: center;
-  width: 20%;
+.commands {
+  padding-right: 40px;
+  padding-left: 40px;
+
+  ul {
+    margin-top: 30px;
+    line-height: 30px;
+  }
 }
 
 :global(.grm-panel__content) {
@@ -77,7 +63,7 @@ h3 {
   align-items: center;
 
   span {
-    margin-top: 5px;
+    margin-top: 15px;
   }
 }
 
@@ -113,5 +99,15 @@ h3 {
 
   to {
     -webkit-transform: translate(200%) rotate(359deg);
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .structure {
+    width: 95%;
   }
 }

@@ -66,7 +66,7 @@ import * as actions from './$name-actions'
 
 const mapStateToProps = (state) => {
   return {
-    variable: state.$camelCase.variable
+    variable: state.$camelCase
   };
 };
 
@@ -108,8 +108,7 @@ import {
 export function functionName() {
   return {
     type: TYPE_NAME,
-    payload: {
-    }
+    payload: []
   }
 }
 EOF
@@ -124,17 +123,24 @@ EOF
 echo 'Created Constants'
 
 cat > $path/$name/$name-reducer.js <<EOF
+
+import produce from 'immer';
+
 const initialState = {
+  list: []
 };
 
-export default (state = initialState, action) => {
-  switch (action.type) {
-    case 'TYPE_NAME':
-      return { ...state }
-    default:
-      return state
-  }
-};
+export default (state = initialState, action) =>
+  produce(state, draft => {
+    switch (action.type) {
+      case 'TYPE_NAME':
+        draft.list = action.payload
+        break
+      default:
+        return state;
+    }
+  })
+
 EOF
 
 echo 'Created Reducer'

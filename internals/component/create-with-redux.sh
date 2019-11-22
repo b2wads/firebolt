@@ -51,22 +51,22 @@ mkdir -p $path/$name
 echo 'Created folder'
 
 cat > $path/$name/index.js <<EOF
-import $capitalizeName from './$name-container';
+import $capitalizeName from './$name-container'
 
-export default $capitalizeName;
+export default $capitalizeName
 EOF
 
 echo 'Created index'
 
 cat > $path/$name/$name-container.js <<EOF
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import $capitalizeName from './$name-component';
-import * as actions from './$name-actions';
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import $capitalizeName from './$name-component'
+import * as actions from './$name-actions'
 
 const mapStateToProps = (state) => {
   return {
-    variable: state.reducers.$camelCase.variable
+    variable: state.$camelCase.variable
   };
 };
 
@@ -78,32 +78,32 @@ const mapDispatchToProps = (dispatch) => {
   return { actions: bindActionCreators(actionCreators, dispatch) }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)($capitalizeName);
+export default connect(mapStateToProps, mapDispatchToProps)($capitalizeName)
 EOF
 
 echo 'Created Container'
 
 cat > $path/$name/$name-component.js <<EOF
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import styles from './$name.styl';
+import styles from './$name.styl'
 
 function $capitalizeName() {
   return (
     <div>$capitalizeName</div>
-  );
+  )
 }
 
 $capitalizeName.propTypes = {}
 
-export default $capitalizeName;
+export default $capitalizeName
 EOF
 
 cat > $path/$name/$name-actions.js <<EOF
 import {
   TYPE_NAME
-} from './$name-types';
+} from './$name-constants'
 
 export function functionName() {
   return {
@@ -116,6 +116,13 @@ EOF
 
 echo 'Created Actions'
 
+cat > $path/$name/$name-constants.js <<EOF
+export const TYPE_NAME = 'TYPE_NAME'
+
+EOF
+
+echo 'Created Constants'
+
 cat > $path/$name/$name-reducer.js <<EOF
 const initialState = {
 };
@@ -125,7 +132,7 @@ export default (state = initialState, action) => {
     case 'TYPE_NAME':
       return { ...state }
     default:
-      return state;
+      return state
   }
 };
 EOF
@@ -201,7 +208,7 @@ cat > $path/$name/$name.styl <<EOF
  ================ */
 
 .default {
-  @extend \$default;
+  @extend \$default
 }
 EOF
 

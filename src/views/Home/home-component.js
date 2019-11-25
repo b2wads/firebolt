@@ -17,7 +17,7 @@ export default function Home() {
   function header() {
     return (
       <div className={styles.header}>
-        <img src={Grimorio} height={80} width={100} alt="Logo do Grimório" />
+        <img src={Grimorio} height={70} alt="Logo do Grimório" />
         <h1>Welcome to React Boilerplate</h1>
       </div>
     )
@@ -101,16 +101,16 @@ export default function Home() {
     return (
       <ul className={styles.listDependencies}>
         <div className={styles.projects}>
-          {panel('Redux', 'https://www.cypress.io/', Redux)}
-          {panel('Eslint', 'https://github.com/b2wads/grimorio-ui', Eslint)}
-          {panel('Prettier', 'https://github.com/immerjs/immer', Prettier)}
+          {panel('Redux', 'https://redux.js.org/', Redux)}
+          {panel('Eslint', 'https://eslint.org/', Eslint)}
+          {panel('Prettier', 'https://prettier.io/', Prettier)}
         </div>
         <div className={styles.projects}>
-          {panel('Jest', 'https://www.cypress.io/', Jest)}
-          {panel('Stylus', 'https://github.com/b2wads/grimorio-ui', Stylus)}
+          {panel('Jest', 'https://jestjs.io/', Jest)}
+          {panel('Stylus', 'http://stylus-lang.com/', Stylus)}
           {panel(
             'React-router-dom',
-            'https://github.com/immerjs/immer',
+            'https://reacttraining.com/react-router/web',
             ReactRouterDom
           )}
         </div>

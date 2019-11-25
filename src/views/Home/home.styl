@@ -15,8 +15,8 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 35px;
-  margin-bottom: 15px;
+  margin: 35px 0px;
+  text-align: center;
 
   span {
     font-weight: bold;
@@ -30,8 +30,9 @@ footer {
 .container {
   display: flex;
   flex-direction: row;
+  padding: 30px 0 20px 0;
   justify-content: space-between;
-  border-bottom: 1px solid #404040;
+  border-bottom: 1px solid #dcdcdc;
 }
 
 .exampleComponents {
@@ -59,15 +60,14 @@ footer {
     margin-top: 30px;
     line-height: 30px;
 
-    @media(min-width: 1201px) and (max-width: 1455px) {
+    @media (min-width: 1201px) and (max-width: 1455px) {
       line-height: 18px;
     }
 
-    @media(min-width: 1456px) and (max-width: 1733px) {
+    @media (min-width: 1456px) and (max-width: 1733px) {
       line-height: 22px;
     }
   }
-
 }
 
 :global(.grm-panel__content) {
@@ -129,9 +129,8 @@ footer {
   flex-direction: column;
 
   img {
-    -webkit-animation: rotation 10s linear infinite;
-    -moz-animation: rotation 10s linear infinite;
-    animation: rotation 10s linear infinite;
+    transform: translateX(80px);
+    animation: float 6s ease-in-out infinite;
   }
 
   h1 {
@@ -141,13 +140,20 @@ footer {
   }
 }
 
-@keyframes rotation {
-  from {
-    -webkit-transform: translate(-200%) rotate(0deg);
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.8);
+    transform: translateX(-60px);
   }
 
-  to {
-    -webkit-transform: translate(200%) rotate(359deg);
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.1);
+    transform: translateX(60px);
+  }
+
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.8);
+    transform: translateX(-60px);
   }
 }
 
@@ -165,7 +171,7 @@ footer {
   }
 }
 
-@media(min-width: 2500px) {
+@media (min-width: 2500px) {
   .container {
     text-align: center;
   }

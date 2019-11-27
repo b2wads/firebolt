@@ -20,7 +20,7 @@ exports[`test render home page 1`] = `
         <div className={[undefined]}>
           <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
             <a href=\\"https://redux.js.org/\\">
-              <img width={50} height={50} src={{...}} alt=\\"Logo Redux\\" />
+              <img height={50} src={{...}} alt=\\"Logo Redux\\" />
             </a>
             <span>
               Redux
@@ -28,7 +28,7 @@ exports[`test render home page 1`] = `
           </Panel>
           <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
             <a href=\\"https://eslint.org/\\">
-              <img width={50} height={50} src={{...}} alt=\\"Logo Eslint\\" />
+              <img height={50} src={{...}} alt=\\"Logo Eslint\\" />
             </a>
             <span>
               Eslint
@@ -36,7 +36,7 @@ exports[`test render home page 1`] = `
           </Panel>
           <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
             <a href=\\"https://prettier.io/\\">
-              <img width={50} height={50} src={{...}} alt=\\"Logo Prettier\\" />
+              <img height={50} src={{...}} alt=\\"Logo Prettier\\" />
             </a>
             <span>
               Prettier
@@ -46,7 +46,7 @@ exports[`test render home page 1`] = `
         <div className={[undefined]}>
           <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
             <a href=\\"https://jestjs.io/\\">
-              <img width={50} height={50} src={{...}} alt=\\"Logo Jest\\" />
+              <img height={50} src={{...}} alt=\\"Logo Jest\\" />
             </a>
             <span>
               Jest
@@ -54,7 +54,7 @@ exports[`test render home page 1`] = `
           </Panel>
           <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
             <a href=\\"http://stylus-lang.com/\\">
-              <img width={50} height={50} src={{...}} alt=\\"Logo Stylus\\" />
+              <img height={50} src={{...}} alt=\\"Logo Stylus\\" />
             </a>
             <span>
               Stylus
@@ -62,7 +62,7 @@ exports[`test render home page 1`] = `
           </Panel>
           <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
             <a href=\\"https://reacttraining.com/react-router/web\\">
-              <img width={50} height={50} src={{...}} alt=\\"Logo React-router-dom\\" />
+              <img height={50} src={{...}} alt=\\"Logo React-router-dom\\" />
             </a>
             <span>
               React-router-dom
@@ -72,7 +72,7 @@ exports[`test render home page 1`] = `
         <div className={[undefined]}>
           <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
             <a href=\\"https://www.cypress.io/\\">
-              <img width={50} height={50} src={{...}} alt=\\"Logo Cypress\\" />
+              <img height={50} src={{...}} alt=\\"Logo Cypress\\" />
             </a>
             <span>
               Cypress
@@ -80,7 +80,7 @@ exports[`test render home page 1`] = `
           </Panel>
           <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
             <a href=\\"https://github.com/b2wads/grimorio-ui\\">
-              <img width={50} height={50} src={{...}} alt=\\"Logo Grimorio\\" />
+              <img height={50} src={{...}} alt=\\"Logo Grimorio\\" />
             </a>
             <span>
               Grimorio
@@ -88,7 +88,7 @@ exports[`test render home page 1`] = `
           </Panel>
           <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
             <a href=\\"https://github.com/immerjs/immer\\">
-              <img width={50} height={50} src={{...}} alt=\\"Logo Immer\\" />
+              <img height={50} src={{...}} alt=\\"Logo Immer\\" />
             </a>
             <span>
               Immer

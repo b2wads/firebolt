@@ -90,7 +90,7 @@ export default function Home() {
     return (
       <Panel className={styles.panel}>
         <a href={url}>
-          <img width={50} height={50} src={image} alt={`Logo ${name}`} />
+          <img height={50} src={image} alt={`Logo ${name}`} />
         </a>
         <span>{name}</span>
       </Panel>

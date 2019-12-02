@@ -51,18 +51,18 @@ mkdir -p $path/$name
 echo 'Created folder'
 
 cat > $path/$name/index.js <<EOF
-import $capitalizeName from './$name-component';
+import $capitalizeName from './$name-component'
 
-export default $capitalizeName;
+export default $capitalizeName
 EOF
 
 echo 'Created index'
 
 cat > $path/$name/$name-component.js <<EOF
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import styles from './$name.styl';
+import styles from './$name.styl'
 
 function $capitalizeName() {
     return (
@@ -72,7 +72,7 @@ function $capitalizeName() {
 
 $capitalizeName.propTypes = {}
 
-export default $capitalizeName;
+export default $capitalizeName
 EOF
 
 echo 'Created Component'
@@ -80,7 +80,7 @@ echo 'Created Component'
 cat > $path/$name/$name.spec.js <<EOF
 
 import { shallow } from 'enzyme'
-import $capitalizeName from './$name-component';
+import $capitalizeName from './$name-component'
 
 /** @test {$capitalizeName} */
 describe('$capitalizeName component', () => {
@@ -90,7 +90,7 @@ describe('$capitalizeName component', () => {
       const wrapper = shallow(
         <$capitalizeName />
       );
-      expect(wrapper.length).toEqual(1);
+      expect(wrapper.length).toEqual(1)
     });
   });
 });
@@ -121,7 +121,7 @@ cat > $path/$name/$name.styl <<EOF
  ================ */
 
 .default {
-  @extend \$default;
+  @extend \$default
 }
 EOF
 

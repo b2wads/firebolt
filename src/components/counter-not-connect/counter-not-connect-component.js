@@ -20,9 +20,9 @@ export default function CounterNotConnect() {
   return (
     <div className={styles.connectNotComponent}>
       <span>
-        Componente não conectado -{' '}
+        Componente não conectado -
         <strong>
-          Valor:<span className="value">{counter}</span>
+          Valor:<span className="value"> {counter}</span>
         </strong>
       </span>
       <div>

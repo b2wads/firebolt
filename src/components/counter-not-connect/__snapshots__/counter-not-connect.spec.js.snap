@@ -4,10 +4,10 @@ exports[`not connect snapshot counter not connect 1`] = `
 "<div className={[undefined]}>
   <span>
     Componente não conectado -
-     
     <strong>
       Valor:
       <span className=\\"value\\">
+         
         0
       </span>
     </strong>

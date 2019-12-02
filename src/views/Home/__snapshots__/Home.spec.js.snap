@@ -14,7 +14,7 @@ exports[`test render home page 1`] = `
         Estrutura
       </h2>
       <span>
-        Esse repositório oferece uma estrurura padrão para dar início à projetos React. Alguns exemplos dessas ferramentas:
+        Este repositório oferece uma estrutura inicial para projetos React. Algumas das ferramentas usadas são:
       </span>
       <ul className={[undefined]}>
         <div className={[undefined]}>
@@ -103,7 +103,7 @@ exports[`test render home page 1`] = `
           Comandos 
         </h2>
         <span>
-          Alguns comandos que estão disponívels para serem executados na pasta raiz do projeto:
+          Alguns comandos que estão disponíveis para serem executados na pasta raiz do projeto:
         </span>
         <ul>
           <li>

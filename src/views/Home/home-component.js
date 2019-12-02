@@ -28,7 +28,7 @@ export default function Home() {
       <div>
         <h2>Comandos </h2>
         <span>
-          Alguns comandos que estão disponívels para serem executados na pasta
+          Alguns comandos que estão disponíveis para serem executados na pasta
           raiz do projeto:
         </span>
         <ul>
@@ -128,8 +128,8 @@ export default function Home() {
       <div className={styles.structure}>
         <h2>Estrutura</h2>
         <span>
-          Esse repositório oferece uma estrurura padrão para dar início à
-          projetos React. Alguns exemplos dessas ferramentas:
+          Este repositório oferece uma estrutura inicial para projetos React.
+          Algumas das ferramentas usadas são:
         </span>
         {listDependencies()}
       </div>

@@ -1,0 +1,178 @@
+span, li {
+  font-size: 16px;
+}
+
+h2 {
+  text-decoration: underline;
+  margin: 15px 0px;
+}
+
+h3 {
+  font-weight: 100;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 35px 0 0 0;
+  text-align: center;
+
+  span {
+    font-weight: bold;
+  }
+
+  a {
+    margin-left: 5px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 30px 0 20px 0;
+  justify-content: space-between;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.exampleComponents {
+  display: flex;
+  flex-direction: column;
+  padding-right: 40px;
+  margin-top: 41px;
+
+  h1 {
+    margin-bottom: 50px;
+  }
+}
+
+.structure {
+  width: 50%;
+  padding-left: 40px;
+}
+
+.commands {
+  padding-right: 40px;
+  padding-left: 40px;
+  width: 50%;
+
+  ul {
+    margin-top: 30px;
+    line-height: 30px;
+
+    @media (min-width: 1201px) and (max-width: 1455px) {
+      line-height: 18px;
+    }
+
+    @media (min-width: 1456px) and (max-width: 1733px) {
+      line-height: 22px;
+    }
+  }
+}
+
+:global(.grm-panel__content) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span {
+    margin-top: 15px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.listDependencies {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+
+  div {
+    li {
+      align-items: center;
+      border: 1px solid;
+      width: 25%;
+
+      img {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+.panel {
+  align-items: center;
+  width: 30%;
+}
+
+.header {
+  background: black;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    transform: translateX(80px);
+    animation: float 6s ease-in-out infinite;
+  }
+
+  h1 {
+    color: #fff;
+    margin-top: 50px;
+    text-align: center;
+  }
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.8);
+    transform: translateX(-60px);
+  }
+
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.1);
+    transform: translateX(60px);
+  }
+
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.8);
+    transform: translateX(-60px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .commands {
+    width: 100%;
+  }
+
+  .structure {
+    width: 95%;
+  }
+}
+
+@media (min-width: 2500px) {
+  .container {
+    text-align: center;
+  }
+}

@@ -1,17 +1,185 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`test render home page 1`] = `
-"<Fragment>
-  <h1>
-    Exemplos de componentes
-  </h1>
-  <Connect(CounterConnect) />
-  <CounterNotConnect />
-  <h2>
-    Componente com CSS Modules
-  </h2>
-  <MainButton>
-    Botão com margem
-  </MainButton>
-</Fragment>"
+"<div className={[undefined]}>
+  <div className={[undefined]}>
+    <img src={{...}} height={70} alt=\\"Logo do Grimório\\" />
+    <h1>
+      Welcome to React Boilerplate
+    </h1>
+  </div>
+  <div className={[undefined]}>
+    <div className={[undefined]}>
+      <h2>
+        Estrutura
+      </h2>
+      <span>
+        Este repositório oferece uma estrutura inicial para projetos React. Algumas das ferramentas usadas são:
+      </span>
+      <ul className={[undefined]}>
+        <div className={[undefined]}>
+          <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
+            <a href=\\"https://redux.js.org/\\">
+              <img height={50} src={{...}} alt=\\"Logo Redux\\" />
+            </a>
+            <span>
+              Redux
+            </span>
+          </Panel>
+          <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
+            <a href=\\"https://eslint.org/\\">
+              <img height={50} src={{...}} alt=\\"Logo Eslint\\" />
+            </a>
+            <span>
+              Eslint
+            </span>
+          </Panel>
+          <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
+            <a href=\\"https://prettier.io/\\">
+              <img height={50} src={{...}} alt=\\"Logo Prettier\\" />
+            </a>
+            <span>
+              Prettier
+            </span>
+          </Panel>
+        </div>
+        <div className={[undefined]}>
+          <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
+            <a href=\\"https://jestjs.io/\\">
+              <img height={50} src={{...}} alt=\\"Logo Jest\\" />
+            </a>
+            <span>
+              Jest
+            </span>
+          </Panel>
+          <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
+            <a href=\\"http://stylus-lang.com/\\">
+              <img height={50} src={{...}} alt=\\"Logo Stylus\\" />
+            </a>
+            <span>
+              Stylus
+            </span>
+          </Panel>
+          <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
+            <a href=\\"https://reacttraining.com/react-router/web\\">
+              <img height={50} src={{...}} alt=\\"Logo React-router-dom\\" />
+            </a>
+            <span>
+              React-router-dom
+            </span>
+          </Panel>
+        </div>
+        <div className={[undefined]}>
+          <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
+            <a href=\\"https://www.cypress.io/\\">
+              <img height={50} src={{...}} alt=\\"Logo Cypress\\" />
+            </a>
+            <span>
+              Cypress
+            </span>
+          </Panel>
+          <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
+            <a href=\\"https://github.com/b2wads/grimorio-ui\\">
+              <img height={50} src={{...}} alt=\\"Logo Grimorio\\" />
+            </a>
+            <span>
+              Grimorio
+            </span>
+          </Panel>
+          <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
+            <a href=\\"https://github.com/immerjs/immer\\">
+              <img height={50} src={{...}} alt=\\"Logo Immer\\" />
+            </a>
+            <span>
+              Immer
+            </span>
+          </Panel>
+        </div>
+      </ul>
+    </div>
+    <div className={[undefined]}>
+      <div>
+        <h2>
+          Comandos 
+        </h2>
+        <span>
+          Alguns comandos que estão disponíveis para serem executados na pasta raiz do projeto:
+        </span>
+        <ul>
+          <li>
+            <strong>
+              yarn
+            </strong>
+            : Instala os módulos do projeto
+          </li>
+          <li>
+            <strong>
+              yarn start:dev
+            </strong>
+            : Start do projeto, rodando em
+            <a href=\\"http://localhost:8080\\">
+               localhost:8080
+            </a>
+          </li>
+          <li>
+            <strong>
+              yarn test
+            </strong>
+            : Roda os testes do projeto
+          </li>
+          <li>
+            <strong>
+              yarn run cypress:open
+            </strong>
+            : Abre a interface do Cypress para você escolher um teste para rodar.
+          </li>
+          <li>
+            <strong>
+              yarn run cypress:run
+            </strong>
+            : Roda os testes do Cypress no console
+          </li>
+          <li>
+            <strong>
+              yarn create:redux nome-do-componente 
+            </strong>
+            : Cria pasta com os arquivos de um componente conectado ao Redux
+          </li>
+          <li>
+            <strong>
+              yarn create:comp nome-do-componente
+            </strong>
+            : Cria pasta com os arquivos de um componente desconectado do Redux
+          </li>
+          <li>
+            <strong>
+              yarn create:view nome-do-componente
+            </strong>
+            : Cria pasta com os arquivos de uma view conectada ao Redux
+          </li>
+        </ul>
+      </div>
+      <div className={[undefined]}>
+        <h2>
+          Exemplos de componentes
+        </h2>
+        <span>
+          Abaixo temos exemplos de componentes que podem ser criados e utilizados a partir do boilerplate
+        </span>
+        <div>
+          <Connect(CounterConnect) />
+          <CounterNotConnect />
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <span>
+      Quer saber mais ou tirar dúvidas sobre esse projeto? Leia a nossa
+      <a href=\\"https://github.com/b2wads/react-boilerplate/wiki\\">
+        Documentação
+      </a>
+    </span>
+  </footer>
+</div>"
 `;

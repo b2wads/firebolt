@@ -125,6 +125,7 @@ echo 'Created Constants'
 cat > $path/$name/$name-reducer.js <<EOF
 
 import produce from 'immer';
+import { TYPE_NAME } from './$name-constants'
 
 const initialState = {
   list: []
@@ -133,7 +134,7 @@ const initialState = {
 export default (state = initialState, action) =>
   produce(state, draft => {
     switch (action.type) {
-      case 'TYPE_NAME':
+      case TYPE_NAME:
         draft.list = action.payload
         break
       default:
@@ -221,3 +222,6 @@ EOF
 echo 'Created STYL'
 
 echo 'Created files !!'
+
+node_modules/.bin/prettier --write "src/views/$name/*.js"
+node_modules/.bin/eslint --fix .

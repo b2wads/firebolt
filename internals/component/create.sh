@@ -128,3 +128,6 @@ EOF
 echo 'Created STYL'
 
 echo 'Created files !!'
+
+node_modules/.bin/prettier --write "src/components/$name/*.js"
+node_modules/.bin/eslint --fix .

@@ -10,7 +10,6 @@ const props = {
 const wrapper = shallow(<MainButton {...props} />)
 
 it('prim', () => {
-  console.log(wrapper.html())
   window.alert = jest.fn()
   jest.spyOn(window, 'alert')
   expect(wrapper.debug()).toMatchSnapshot()

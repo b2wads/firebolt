@@ -90,7 +90,7 @@ describe('$capitalizeName component', () => {
       const wrapper = shallow(
         <$capitalizeName />
       );
-      expect(wrapper.length).toEqual(1)
+      expect(wrapper.isEmpty()).toEqual(false)
     });
   });
 });

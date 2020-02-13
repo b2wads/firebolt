@@ -90,7 +90,7 @@ describe('$capitalizeName component', () => {
       const wrapper = shallow(
         <$capitalizeName />
       );
-      expect(wrapper.length).toEqual(1)
+      expect(wrapper.isEmpty()).toEqual(false)
     });
   });
 });
@@ -128,3 +128,6 @@ EOF
 echo 'Created STYL'
 
 echo 'Created files !!'
+
+node_modules/.bin/prettier --write "src/components/$name/*.js"
+node_modules/.bin/eslint --fix "src/components/$name/*.js"

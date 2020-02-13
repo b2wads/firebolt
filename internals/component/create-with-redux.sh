@@ -125,6 +125,7 @@ echo 'Created Constants'
 cat > $path/$name/$name-reducer.js <<EOF
 
 import produce from 'immer';
+import { TYPE_NAME } from './$name-constants'
 
 const initialState = {
   list: []
@@ -133,7 +134,7 @@ const initialState = {
 export default (state = initialState, action) =>
   produce(state, draft => {
     switch (action.type) {
-      case 'TYPE_NAME':
+      case TYPE_NAME:
         draft.list = action.payload
         break
       default:
@@ -148,7 +149,8 @@ echo 'Created Reducer'
 cat > $path/$name/$name.spec.js <<EOF
 import { shallow } from 'enzyme'
 import React from 'react'
-import $capitalizeName from './$name-component'
+import ${capitalizeName}Component from './$name-component'
+import ${capitalizeName}Container from './$name-container'
 
 /** @test {$capitalizeName} */
 jest.mock('react-redux', () => {
@@ -167,24 +169,27 @@ describe('$capitalizeName component', () => {
   describe('#render', () => {
     it('render correctly', () => {
       const wrapper = shallow(
-        <$capitalizeName />
+        <${capitalizeName}Component />
       );
-      expect(wrapper.length).to.equal(1);
+      expect(wrapper.isEmpty()).toEqual(false)
     });
 
     it('test mapStateToProps', () => {
       const state = {
         // inclua aqui seus estados conectados
+        $camelCase: {}
       }
-      const resp = {}
-      expect($capitalizeName.mapStateToProps(state)).toEqual(resp)
+      const resp = {
+        variable: {}
+      }
+      expect(${capitalizeName}Container.mapStateToProps(state)).toEqual(resp)
     })
 
     it('test mapDispatchToProps ', () => {
-      const resp = {
-        // inclua aqui suas actions
-      }
-      expect($capitalizeName.mapDispatchToProps).toEqual(resp)
+      const dispatch = jest.fn()
+      expect(${capitalizeName}Container.mapDispatchToProps(dispatch)).toHaveProperty(
+        'actions'
+      )
     })
   });
 });
@@ -221,3 +226,6 @@ EOF
 echo 'Created STYL'
 
 echo 'Created files !!'
+
+node_modules/.bin/prettier --write "src/views/$name/*.js"
+node_modules/.bin/eslint --fix "src/views/$name/*.js"

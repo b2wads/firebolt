@@ -141,9 +141,7 @@ export default function Home() {
       <footer>
         <span>
           Quer saber mais ou tirar dúvidas sobre esse projeto? Leia a nossa
-          <a href="https://github.com/b2wads/react-boilerplate/wiki">
-            Documentação
-          </a>
+          <a href="https://github.com/b2wads/firebolt/wiki">Documentação</a>
         </span>
       </footer>
     )

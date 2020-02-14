@@ -1,17 +1,16 @@
 # 🔥 Firebolt - React Boilerplate
 
-<p align="center">
+<p>
   Esse repositório oferece uma esturura padrão para dar início à projetos React ⚛️.
-</p>
 Aqui você encontra integrações com algumas ferramentas, como: <a href="http://redux.js.org/docs/introduction/">Redux</a>, <a href="http://eslint.org/">Eslint</a>, <a href="https://prettier.io/">Prettier</a>, <a href="https://jestjs.io/">Jest</a>, <a href="http://stylus-lang.com/">Stylus</a>, <a href="https://www.cypress.io/">Cypress</a> e <a href="https://github.com/b2wads/grimorio-ui">Grimorio✨</a>
 </p>
 
 
-<p align="center">
+<p>
 Para utilizar esse Boilerplate em seu projeto, é só clonar e começar a codar 💻
 </p>
 
-<div align="center">
+<div>
 
   [![GitHub issues](https://img.shields.io/github/issues/b2wads/firebolt)](https://github.com/b2wads/firebolt/issues)
   [![GitHub contributors](https://img.shields.io/github/contributors/b2wads/firebolt)](https://github.com/b2wads/firebolt/graphs/contributors)  

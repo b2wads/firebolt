@@ -1,11 +1,24 @@
-# React Boilerplate
+# 🔥 Firebolt - React Boilerplate
 
-Esse repositório oferece uma esturura padrão para dar início à projetos React.
-Aqui você encontra integrações com algumas ferramentas, como: [Redux](http://redux.js.org/docs/introduction/), [Eslint](http://eslint.org/), [Prettier](https://prettier.io/), [Jest](https://jestjs.io/), [Stylus](http://stylus-lang.com/), [Cypress](https://www.cypress.io/) e [Grimorio](https://github.com/b2wads/grimorio-ui)
+<p>
+  Esse repositório oferece uma esturura padrão para dar início à projetos React ⚛️.
+</p>
+<p>
+Aqui você encontra integrações com algumas ferramentas, como: <a href="http://redux.js.org/docs/introduction/">Redux</a>, <a href="http://eslint.org/">Eslint</a>, <a href="https://prettier.io/">Prettier</a>, <a href="https://jestjs.io/">Jest</a>, <a href="http://stylus-lang.com/">Stylus</a>, <a href="https://www.cypress.io/">Cypress</a> e <a href="https://github.com/b2wads/grimorio-ui">Grimorio✨</a>
+</p>
 
-Para utilizar esse Boilerplate em seu projeto, é só clonar e começar a codar.
 
-## Comandos
+<p>
+Para utilizar esse Boilerplate em seu projeto, é só clonar e começar a codar 💻
+</p>
+
+<div>
+
+  [![GitHub issues](https://img.shields.io/github/issues/b2wads/firebolt)](https://github.com/b2wads/firebolt/issues)
+  [![GitHub contributors](https://img.shields.io/github/contributors/b2wads/firebolt)](https://github.com/b2wads/firebolt/graphs/contributors)  
+</div>
+
+## 🕹 Comandos
 
 - **yarn**: Instala os módulos do projeto
 - **yarn start:dev**: Start do projeto, rodando em [http://localhost:8080](http://localhost:8080).
@@ -16,6 +29,6 @@ Para utilizar esse Boilerplate em seu projeto, é só clonar e começar a codar.
 - **yarn create:comp nome-do-componente**: Cria pasta com os arquivos de um componente desconectado do Redux
 - **yarn create:view nome-do-componente**: Cria pasta com os arquivos de uma view conectada ao Redux
 
-## Manual
+## 📜 Docs
 
-Quer saber mais ou tirar dúvidas sobre esse projeto? Leia a nossa [Documentação](https://github.com/b2wads/react-boilerplate/wiki)
+Quer saber mais ou tirar dúvidas sobre esse projeto? Leia a nossa [Documentação](https://github.com/b2wads/firebolt/wiki)

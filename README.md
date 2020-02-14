@@ -5,6 +5,12 @@ Aqui você encontra integrações com algumas ferramentas, como: [Redux](http://
 
 Para utilizar esse Boilerplate em seu projeto, é só clonar e começar a codar.
 
+<div align="center">
+
+  [![GitHub issues](https://img.shields.io/github/issues/b2wads/firebolt)](https://github.com/b2wads/firebolt/issues)
+  [![GitHub contributors](https://img.shields.io/github/contributors/b2wads/firebolt)](https://github.com/b2wads/firebolt/graphs/contributors)  
+</div>
+
 ## 🕹 Comandos
 
 - **yarn**: Instala os módulos do projeto
@@ -16,6 +22,6 @@ Para utilizar esse Boilerplate em seu projeto, é só clonar e começar a codar.
 - **yarn create:comp nome-do-componente**: Cria pasta com os arquivos de um componente desconectado do Redux
 - **yarn create:view nome-do-componente**: Cria pasta com os arquivos de uma view conectada ao Redux
 
-### 📜 Docs
+## 📜 Docs
 
 Quer saber mais ou tirar dúvidas sobre esse projeto? Leia a nossa [Documentação](https://github.com/b2wads/firebolt/wiki)

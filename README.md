@@ -2,7 +2,8 @@
 
 <p align="center">
   Esse repositório oferece uma esturura padrão para dar início à projetos React ⚛️.
-Aqui você encontra integrações com algumas ferramentas, como: [Redux](http://redux.js.org/docs/introduction/), [Eslint](http://eslint.org/), [Prettier](https://prettier.io/), [Jest](https://jestjs.io/), [Stylus](http://stylus-lang.com/), [Cypress](https://www.cypress.io/) e [Grimorio✨](https://github.com/b2wads/grimorio-ui)
+</p>
+Aqui você encontra integrações com algumas ferramentas, como: <a href="http://redux.js.org/docs/introduction/">Redux</a>, <a href="http://eslint.org/">Eslint</a>, <a href="https://prettier.io/">Prettier</a>, <a href="https://jestjs.io/">Jest</a>, <a href="http://stylus-lang.com/">Stylus</a>, <a href="https://www.cypress.io/">Cypress</a> e <a href="https://github.com/b2wads/grimorio-ui">Grimorio✨</a>
 </p>
 
 

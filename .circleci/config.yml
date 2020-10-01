@@ -29,7 +29,7 @@ jobs:
           paths:
             - ~/.cache/yarn
       - run:
-          command: yarn run test:unit
+          command: yarn run test
           name: Run YARN tests
 
 workflows:

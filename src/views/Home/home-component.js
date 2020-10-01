@@ -18,7 +18,7 @@ export default function Home() {
     return (
       <div className={styles.header}>
         <img src={Grimorio} height={70} alt="Logo do Grimório" />
-        <h1>Welcome to React Boilerplate</h1>
+        <h1 data-cy="welcome">Firebolt! O boilerplate react do B2WADS</h1>
       </div>
     )
   }

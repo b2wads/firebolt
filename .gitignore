@@ -71,4 +71,6 @@ typings/
 # IDE
 .vscode
 
+# build
 public/
+dist/

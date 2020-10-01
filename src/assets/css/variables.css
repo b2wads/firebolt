@@ -1,19 +1,19 @@
 /* custom-variables.css */
 :root {
-    --c-primary: #ad1b1b;
-    --c-primary-light: #1bfff1;
-    --c-primary-dark: #008179;
-    --c-primary-dark-hover: #006e68;
+    --c-primary: #5E4596;
+    --c-primary-light: #785FB0;
+    --c-primary-dark: #452C7D;
+    --c-primary-dark-hover: #2B1263;
     --c-secondary: #dcdcdc;
     --c-secondary-light: #e7e7e7;
     --c-secondary-medium: #bbb;
     --c-secondary-dark: #9a9a9a;
     --c-support: #2c3b4d;
-    --c-support-light: #48617f;
-    --c-support-dark: #1a293c;
-    --c-active-input: #00b8ad;
+    --c-support-light: #66667D;
+    --c-support-dark: #000017;
+    --c-active-input: #5E4596;
     --c-back-disabled: #eee;
     --c-text-disabled: #999;
-    --c-menu-text: #3f5d79;
+    --c-menu-text: #1A1A31;
     --c-beacon-color: #de4e4e;
   }

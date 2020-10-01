@@ -4,6 +4,18 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const cssNano = require('cssnano')
 const postcssCustomProperties = require('postcss-custom-properties')
 
+const grmPostCSS = [
+  postcssCustomProperties({
+    preserve: false, // Opção para sobrescrever as variaveis
+    importFrom: [
+      './node_modules/@b2wads/grimorio-ui/lib/css/variables.css',
+      './src/assets/css/variables.css',
+    ],
+  }),
+]
+
+const stylysPostCSS = [cssNano({ preset: 'default' })]
+
 module.exports = {
   entry: {
     boilerplate: [
@@ -41,15 +53,9 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              plugins: () => [
-                postcssCustomProperties({
-                  preserve: false, // Opção para sobrescrever as variaveis
-                  importFrom: [
-                    './node_modules/@b2wads/grimorio-ui/lib/css/variables.css',
-                    './src/assets/css/variables.css',
-                  ],
-                }),
-              ],
+              postcssOptions: {
+                plugins: grmPostCSS,
+              },
             },
           },
         ],
@@ -77,7 +83,9 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              plugins: () => [cssNano({ preset: 'default' })],
+              postcssOptions: {
+                plugins: stylysPostCSS,
+              },
             },
           },
           'stylus-loader',
@@ -90,7 +98,9 @@ module.exports = {
       filename: '[name].[hash].css',
     }),
     new HtmlWebpackPlugin({
+      title: 'Firebolt',
       template: './index.html',
+      minify: false,
     }),
   ],
 }

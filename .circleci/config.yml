@@ -1,54 +1,52 @@
 version: 2.1
 
-commands:
-  all-tests:
-    description: 'Roda todos os testes do projeto (unitários e integração)'
-    steps:
-      - run: 'npm test'
+orbs:
+  cypress: cypress-io/cypress@1.26.0
+  node: circleci/node@2.0.2
+
+executors:
+  cypress-chrome:
+    docker:
+      - image: 'cypress/browsers:node12.0.0-chrome73-ff68'
 
 jobs:
-  node10x: &template
-    docker:
-      - image: circleci/node:10-jessie
-        #auth:
-        #username: $B2WADS_DOCKER_REGISTRY_USERNAME
-        #password: $B2WADS_DOCKER_REGISTRY_PASSWORD
-      #- image: mongo:3.6
-      #- image: elasticsearch:5
-      #- image: rabbitmq:3.6-alpine
-      #- image: redis:5
+  jest:
+    executor:
+      name: node/default
+      tag: '12.16'
     steps:
       - checkout
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
       - run:
-          name: Install deps
-          command: npm install
-      # - run:
-      #     name: Format check
-      #     command: npm run fmt:check
-      - all-tests
+          name: Install Dependencies
+          command: yarn install --immutable
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
       - run:
-          when: on_success
-          command: npm run codecov
-  node12x:
-    <<: *template
-    docker:
-      - image: circleci/node:12
-      #- image: mongo:3.6
-      #- image: elasticsearch:5
-      #- image: rabbitmq:3.6-alpine
-      #- image: redis:5
+          command: yarn run test:unit
+          name: Run YARN tests
 
-# O `context:` abaixo deve ser usado se você precisa
-# de uma imagem privada. Nesse context devem estar cadastradas as envs:
-# - B2WADS_DOCKER_REGISTRY_USERNAME
-# - B2WADS_DOCKER_REGISTRY_PASSWORD
 workflows:
-  version: 2
-  required-checks:
+  test-app:
     jobs:
-      - node10x:
-          context: docker-registry-auth
-  optional-checks:
+      - jest
+
+  end-to-end:
     jobs:
-      - node12x:
-          context: docker-registry-auth
+      - cypress/run:
+          context: cypress
+          command: npx cypress run -b chrome --headless --reporter list -q
+          yarn: true
+          executor: cypress-chrome
+          start: yarn start:dev
+          wait-on: 'http://localhost:8080'
+          config: 'retries=2'
+          post-steps:
+            - store_artifacts:
+                path: tests/cypress/videos

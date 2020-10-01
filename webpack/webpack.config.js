@@ -29,7 +29,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js',
-    publicPath: '/',
+    publicPath: './',
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
@@ -98,9 +98,7 @@ module.exports = {
       filename: '[name].[hash].css',
     }),
     new HtmlWebpackPlugin({
-      title: 'Firebolt',
       template: './index.html',
-      minify: false,
     }),
   ],
 }

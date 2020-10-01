@@ -17,7 +17,7 @@
     "redux-thunk": "2.3.0"
   },
   "devDependencies": {
-    "@babel/core": "7.0.0-0",
+    "@babel/core": "7.11.6",
     "@babel/preset-env": "7.5.5",
     "@babel/preset-react": "7.0.0",
     "babel-eslint": "10.0.3",
@@ -67,7 +67,7 @@
     "fmt": "./node_modules/.bin/prettier --write \"./**/*.js\" && ./node_modules/.bin/eslint --fix .",
     "fmt:check": "./node_modules/.bin/prettier --check \"./**/*.js\" && ./node_modules/.bin/eslint .",
     "start:dev": "webpack-dev-server --config ./webpack/webpack.config.js",
-    "prebuild": "rm -rf public",
+    "prebuild": "rm -rf dist",
     "build": "webpack --config ./webpack/webpack.config.js",
     "create:comp:redux": "bash ./internals/component/create-with-redux.sh ./src/components",
     "create:comp": "bash ./internals/component/create.sh ./src/components",

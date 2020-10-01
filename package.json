@@ -65,7 +65,7 @@
     "codecov": "./node_modules/.bin/codecov",
     "cypress": "CYPRESS_MOCK=$MOCK ./node_modules/.bin/cypress",
     "cypress:open": "yarn cypress open",
-    "cypress:run": "yarn cypress run",
+    "cypress:run": "yarn cypress run --headless -b chrome -q",
     "fmt": "./node_modules/.bin/prettier --write \"./**/*.js\" && ./node_modules/.bin/eslint --fix .",
     "fmt:check": "./node_modules/.bin/prettier --check \"./**/*.js\" && ./node_modules/.bin/eslint .",
     "start:dev": "webpack-dev-server --config ./webpack/webpack.config.js",

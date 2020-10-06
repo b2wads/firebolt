@@ -1,0 +1,60 @@
+// Breakpoints
+forMobileSmall() {
+  // 349px down
+  @media (max-width: 349px) {
+    block;
+  }
+}
+
+forSmartphone() {
+  // 599px down
+  @media (max-width: 599px) {
+    block;
+  }
+}
+
+forTabletOnly() {
+  // between 599px & 1024px
+  @media (min-width: 599px) and (max-width: 1024px) {
+    block;
+  }
+}
+
+forMobile() {
+  // tablet (1024px) down (synced with layout-reducer)
+  @media (max-width: 1024px) {
+    block;
+  }
+}
+
+forDeskOnly() {
+  // 1025px up
+  @media (min-width: 1025px) {
+    block;
+  }
+}
+
+forSmallDesk() {
+  // 1025px up
+  @media (min-width: 1025px) and (max-width: 1366px) {
+    block;
+  }
+}
+
+forNotebook() {
+  @media (max-width: 1492px) {
+    block;
+  }
+}
+
+forNotebookOnly() {
+  @media (min-width: 1025px) and (max-width: 1492px) {
+    block;
+  }
+}
+
+forFullScreen() {
+  @media (min-width: 1850px) {
+    block;
+  }
+}

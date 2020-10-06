@@ -18,7 +18,7 @@ exports[`test render home page 1`] = `
       </span>
       <ul className={[undefined]}>
         <div className={[undefined]}>
-          <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
+          <Panel className={[undefined]} title={false} size=\\"medium\\" loading={false} accordion={false} open={true} highlight=\\"shadow\\">
             <a href=\\"https://redux.js.org/\\">
               <img height={50} src={{...}} alt=\\"Logo Redux\\" />
             </a>
@@ -26,7 +26,7 @@ exports[`test render home page 1`] = `
               Redux
             </span>
           </Panel>
-          <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
+          <Panel className={[undefined]} title={false} size=\\"medium\\" loading={false} accordion={false} open={true} highlight=\\"shadow\\">
             <a href=\\"https://eslint.org/\\">
               <img height={50} src={{...}} alt=\\"Logo Eslint\\" />
             </a>
@@ -34,7 +34,7 @@ exports[`test render home page 1`] = `
               Eslint
             </span>
           </Panel>
-          <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
+          <Panel className={[undefined]} title={false} size=\\"medium\\" loading={false} accordion={false} open={true} highlight=\\"shadow\\">
             <a href=\\"https://prettier.io/\\">
               <img height={50} src={{...}} alt=\\"Logo Prettier\\" />
             </a>
@@ -44,7 +44,7 @@ exports[`test render home page 1`] = `
           </Panel>
         </div>
         <div className={[undefined]}>
-          <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
+          <Panel className={[undefined]} title={false} size=\\"medium\\" loading={false} accordion={false} open={true} highlight=\\"shadow\\">
             <a href=\\"https://jestjs.io/\\">
               <img height={50} src={{...}} alt=\\"Logo Jest\\" />
             </a>
@@ -52,7 +52,7 @@ exports[`test render home page 1`] = `
               Jest
             </span>
           </Panel>
-          <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
+          <Panel className={[undefined]} title={false} size=\\"medium\\" loading={false} accordion={false} open={true} highlight=\\"shadow\\">
             <a href=\\"http://stylus-lang.com/\\">
               <img height={50} src={{...}} alt=\\"Logo Stylus\\" />
             </a>
@@ -60,7 +60,7 @@ exports[`test render home page 1`] = `
               Stylus
             </span>
           </Panel>
-          <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
+          <Panel className={[undefined]} title={false} size=\\"medium\\" loading={false} accordion={false} open={true} highlight=\\"shadow\\">
             <a href=\\"https://reacttraining.com/react-router/web\\">
               <img height={50} src={{...}} alt=\\"Logo React-router-dom\\" />
             </a>
@@ -70,7 +70,7 @@ exports[`test render home page 1`] = `
           </Panel>
         </div>
         <div className={[undefined]}>
-          <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
+          <Panel className={[undefined]} title={false} size=\\"medium\\" loading={false} accordion={false} open={true} highlight=\\"shadow\\">
             <a href=\\"https://www.cypress.io/\\">
               <img height={50} src={{...}} alt=\\"Logo Cypress\\" />
             </a>
@@ -78,7 +78,7 @@ exports[`test render home page 1`] = `
               Cypress
             </span>
           </Panel>
-          <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
+          <Panel className={[undefined]} title={false} size=\\"medium\\" loading={false} accordion={false} open={true} highlight=\\"shadow\\">
             <a href=\\"https://github.com/b2wads/grimorio-ui\\">
               <img height={50} src={{...}} alt=\\"Logo Grimorio\\" />
             </a>
@@ -86,7 +86,7 @@ exports[`test render home page 1`] = `
               Grimorio
             </span>
           </Panel>
-          <Panel className={[undefined]} brand={{...}} title={false} size=\\"medium\\" loading={false} accordion={false} open={true}>
+          <Panel className={[undefined]} title={false} size=\\"medium\\" loading={false} accordion={false} open={true} highlight=\\"shadow\\">
             <a href=\\"https://github.com/immerjs/immer\\">
               <img height={50} src={{...}} alt=\\"Logo Immer\\" />
             </a>

@@ -11,6 +11,7 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
     jest: true,
+    cy: true,
   },
   parser: 'babel-eslint',
   parserOptions: {
